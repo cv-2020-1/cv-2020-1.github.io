@@ -1,0 +1,27 @@
+.jumbotron {
+    color: black;
+}
+
+.bg-gradient-blue {
+    background-image: linear-gradient(to right, #2a6fc9 0%, #34a3ee 100%);
+}
+
+.bg-gradient-red {
+    background-image: linear-gradient(to right, #fa3434 0%, #f79b84 100%);
+}
+
+.bg-gradient-orange {
+    background-image: linear-gradient(to right, #e09018 0%, #eccd8a 100%);
+}
+
+.bg-gradient-green {
+    background-image: linear-gradient(to right, #17b948 0%, #a0eeb4 100%);
+}
+
+.bg-gradient-yellow {
+    background-image: linear-gradient(to right, #ceec25 0%, #e7e994 100%);
+}
+
+.bg-gradient-purple {
+    background-image: linear-gradient(to right, #bb39e2 0%, #d89de7 100%);
+}
