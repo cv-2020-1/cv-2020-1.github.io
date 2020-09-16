@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 // import ProjectCard from "@lekoarts/gatsby-theme-cara/src/components/project-card"
 import { Link } from "gatsby"
 import { jsx } from "theme-ui"

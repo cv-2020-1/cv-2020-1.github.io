@@ -27,7 +27,7 @@ export default (props) => {
     const Sketch = loadable(() => import("react-p5"))
     return (
       <div className="jumbotron m-4 bg-gradient-orange">
-        <h1 className="display-4">Convoluciones con P5</h1>
+        <h1 className="display-4">Escala de Grises</h1>
         <p className="lead">lorem ipsum</p>
         <hr className="my-4"></hr>
         <p>lorem ipsum</p>
