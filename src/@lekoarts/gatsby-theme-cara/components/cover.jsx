@@ -1,6 +1,6 @@
 /** @jsx jsx */
-// import ProjectCard from "@lekoarts/gatsby-theme-cara/src/components/project-card"
 import React from "react"
+// import ProjectCard from "@lekoarts/gatsby-theme-cara/src/components/project-card"
 import { Link } from "gatsby"
 import { jsx } from "theme-ui"
 import "../../../styles/card.css"
@@ -19,18 +19,17 @@ export default function Cover(props) {
       >
         {props.children}
       </div>
-      <div
+      <h1
         style={{
           textTransform: `uppercase`,
           letterSpacing: `wide`,
           pt: 4,
-          fontSize: [4, 5],
           fontWeight: `medium`,
           lineHeight: 1,
         }}
       >
         {props.title}
-      </div>
+      </h1>
     </Link>
   )
 }

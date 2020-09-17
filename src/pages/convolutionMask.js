@@ -3,7 +3,7 @@ import "../styles/app.css"
 import React from "react"
 import loadable from "@loadable/component"
 
-import nieve from "../assets/nieve.jpg"
+//import nieve from "../assets/nieve.jpg"
 
 let y = 0
 let direction = "^"
@@ -14,7 +14,7 @@ export default (props) => {
 
   const draw = (p5) => {
     p5.background(0)
-    p5.image(nieve,0,0)
+    //p5.image(nieve,0,0)
   }
 
   
