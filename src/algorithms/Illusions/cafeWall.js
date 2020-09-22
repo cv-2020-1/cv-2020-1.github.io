@@ -1,6 +1,8 @@
+
 import React from "react";
-import Sketch from "react-p5";
- 
+import loadable from "@loadable/component"
+
+
 export default function CafeWall () {
 
     let anchoLineaY = 2;
@@ -37,5 +39,11 @@ export default function CafeWall () {
       }
     };
     
-    return <Sketch setup={setup} draw={draw} />;
+    if (typeof window !== "undefined") {
+      const Sketch = loadable(() => import("react-p5"))
+      return <Sketch setup={setup} draw={draw} />;
+    }
+    else {
+      return null
+    }
 };

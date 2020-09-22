@@ -1,6 +1,7 @@
 
 import React from "react";
-import Sketch from "react-p5";
+import loadable from "@loadable/component"
+
 
 export default function Ebbinghaus() {
 
@@ -45,5 +46,11 @@ export default function Ebbinghaus() {
         p5.ellipse(485, 164, 25, 25)
     }
 
-    return <Sketch setup={setup} draw={draw} />;
+    if (typeof window !== "undefined") {
+        const Sketch = loadable(() => import("react-p5"))
+        return <Sketch setup={setup} draw={draw} />;
+    }
+    else {
+       return null
+    }
 }

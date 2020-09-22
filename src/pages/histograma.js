@@ -1,7 +1,6 @@
 
-
 import React from "react";
-import Sketch from "react-p5";
+import loadable from "@loadable/component"
 import imagen from "../assets/Puerto_de_Santander_en_1867_(J._Laurent).jpg";
 
 export default () => {
@@ -36,11 +35,17 @@ export default () => {
         }
     }
 
-    return (
-        <div className="ml-5 mr-5 my-3">
-            <h1>Histograma de imagen</h1>
-            <p>Aqui estamos probando realizar el histograma de imagen y la segmentacion</p>
-            <Sketch setup={setup} preload={preload} />
-        </div>
-    )
+    if (typeof window !== "undefined") {
+        const Sketch = loadable(() => import("react-p5"))
+        return (
+            <div className="ml-5 mr-5 my-3">
+                <h1>Histograma de imagen</h1>
+                <p>Aqui estamos probando realizar el histograma de imagen y la segmentacion</p>
+                <Sketch setup={setup} preload={preload} />
+            </div>
+        )
+    }
+    else {
+        return null
+    }
 };
