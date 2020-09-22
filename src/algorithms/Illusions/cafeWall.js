@@ -1,38 +1,41 @@
-var anchoLineaY = 2;
-var anchoLineaX = 1;
-var filas = 9;
-var alturaCelda = 26;
-var anchoCelda = 30;
+import React from "react";
+import Sketch from "react-p5";
+ 
+export default function CafeWall () {
 
-function setup() {
-  createCanvas(400, (alturaCelda + anchoLineaY) * filas + anchoLineaY);
-  background('#888');
-  smooth();
-}
+    let anchoLineaY = 2;
+    let anchoLineaX = 1;
+    let filas = 9;
+    let alturaCelda = 26;
+    let anchoCelda = 30;
 
-function draw() {
-  background('#888');
-  for (var i = 0; i < filas; i++) {
-    drawRow(i);
-  }
-}
-
-function drawRow(fila) {
-  yPos = fila * (alturaCelda + anchoLineaY) + anchoLineaY;
-  numCells = Math.ceil(400 / anchoCelda) + 3;
-  for (var i = -80; i < numCells; i++) {
-    if (i % 2 == 0) {
-      fill(0);
-    } else {
-      fill('#fff');
-    }
-    noStroke();
-    var pos = fila % 4;
-    if (pos == 3) pos = 1;
-    rect(i * (anchoCelda + anchoLineaX) - pos * mouseX / 15 % (2 * anchoCelda) + 15,
-      yPos,
-      anchoCelda,
-      alturaCelda
-    );
-  }
-}
+    const setup = (p5, canvasParentRef) => {
+        p5.createCanvas(400, (alturaCelda + anchoLineaY) * filas + anchoLineaY).parent(canvasParentRef);
+        p5.smooth();
+    };
+ 
+    const draw = (p5) => {
+      p5.background('#888')
+      for (var i = 0; i < filas; i++) {
+        var yPos = i * (alturaCelda + anchoLineaY) + anchoLineaY;
+        var numCells = Math.ceil(400 / anchoCelda) + 3;
+        for (var j = -80; j < numCells; j++) {
+          if (j % 2 === 0) {
+            p5.fill(0);
+          } else {
+            p5.fill('#fff');
+          }
+          p5.noStroke();
+          var pos = i % 4;
+          if (pos === 3) pos = 1;
+          p5.rect(j * (anchoCelda + anchoLineaX) - pos * p5.mouseX / 15 % (2 * anchoCelda) + 15,
+            yPos,
+            anchoCelda,
+            alturaCelda
+          );
+        }
+      }
+    };
+    
+    return <Sketch setup={setup} draw={draw} />;
+};

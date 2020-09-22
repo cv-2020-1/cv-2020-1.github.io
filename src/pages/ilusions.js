@@ -1,44 +1,23 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import "../styles/app.css"
-import React from "react"
-import loadable from "@loadable/component"
-
-let y = 0
-let direction = "^"
-export default (props) => {
-  const setup = (p5, canvasParentRef) => {
-    // use parent to render the canvas in this ref
-    // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(500, 500).parent(canvasParentRef)
-  }
-
-  const draw = (p5) => {
-    p5.background(0)
-    p5.fill(255, y * 1.3, 0)
-    p5.ellipse(p5.width / 2, y, 50)
-    if (y > p5.height) direction = ""
-    if (y < 0) {
-      direction = "^"
-    }
-    if (direction === "^") y += 8
-    else y -= 4
-  }
-  if (typeof window !== "undefined") {
-    const Sketch = loadable(() => import("react-p5"))
-    return (
-      <div className="jumbotron m-4 bg-gradient-orange">
-        <h1 className="display-4">Escala de Grises</h1>
-        <p className="lead">lorem ipsum</p>
-        <hr className="my-4"></hr>
-        <p>lorem ipsum</p>
-        <a className="btn btn-lg btn-dark" href="#" role="button">
-          Convolución
-        </a>
-        <Sketch setup={setup} draw={draw} />
+import React from "react";
+import CafeWall from '../algorithms/illusions/cafeWall.js';
+import Ebbinghaus from '../algorithms/illusions/Ebbinghaus';
+ 
+export default () => {
+  return(
+    <div className="ml-5 mr-5 my-3">
+      <div>
+        <h1>Ilusiones</h1>
+        <h2>Cafe Wall</h2>
+        <p>La ilusión de la pared de la cafetería es un tipo de ilusión óptico-geométrica, en la que líneas rectas paralelas  que dividien líneas entre 
+          filas formadas por baldosas blancas y negras alternas y escalonadas, aparentan estar inclinadas.</p>
+        <CafeWall />
+        <h2>Ebbinghaus</h2>
+        <p>La ilusión de Ebbinghaus es una ilusión óptica que altera la percepción de las dimensiones relativas. 
+          En la versión más conocida de la ilusión, dos círculos de la misma medida son colocados cercanos uno a otro 
+          y son circundados, uno por círculos de un tamaño mayor y el otro por círculos de menor tamaño; el primer 
+          círculo central parecerá más pequeño que el otro</p>
+        <Ebbinghaus />
       </div>
-    )
-  } else {
-    //     // if window does not exist
-    return null
-  }
-}
+    </div>
+  )
+};
