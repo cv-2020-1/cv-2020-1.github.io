@@ -1,32 +1,36 @@
-const averageGrayScale = (p5, img) => {
-  //   let copyImg = p5.createImage(img.width, img.height)
-  img.loadPixels()
+const editPixels = (p5, img, tipo) => {
+	img.loadPixels();
 
-  for (var x = 1; x < img.width - 1; ++x) {
-    for (var y = 1; y < img.height - 1; ++y) {
-      let loc = (x + img.width * y) * 4
-      let average_rgb = average(
-        img.pixels[loc],
-        img.pixels[loc + 1],
-        img.pixels[loc + 2]
-      )
+	for (var x = 1; x < img.width - 1; ++x) {
+		for (var y = 1; y < img.height - 1; ++y) {
+			let loc = (x + img.width * y) * 4;
+			let average_rgb = tipo(
+				img.pixels[loc],
+				img.pixels[loc + 1],
+				img.pixels[loc + 2]
+			);
+			let color = p5.color(average_rgb, average_rgb, average_rgb);
+			img.pixels[loc] = p5.red(color);
+			img.pixels[loc + 1] = p5.green(color);
+			img.pixels[loc + 2] = p5.blue(color);
+		}
+	}
 
-      img.pixels[loc] = p5.red(p5.color(average_rgb, average_rgb, average_rgb))
-      img.pixels[loc + 1] = p5.green(
-        p5.color(average_rgb, average_rgb, average_rgb)
-      )
-      img.pixels[loc + 2] = p5.blue(
-        p5.color(average_rgb, average_rgb, average_rgb)
-      )
-    }
-  }
+	img.updatePixels();
+	return img;
+};
 
-  img.updatePixels()
-  return img
+export default editPixels;
+
+export function averageGrayScale(r, g, b) {
+	return (r + g + b) / 3;
 }
 
-function average(r, g, b) {
-  return (r + g + b) / 3
+export function ligthnessGrayScale(r, g, b) {
+	return Math.max(r, g, b) + Math.min(r, g, b) / 2;
 }
 
-export default averageGrayScale
+// Gray Scale with LuminosityGrayScale
+export function luminosityGrayScale(r, g, b) {
+	return parseInt(0.21 * r + 0.72 * g + 0.07 * b);
+}
