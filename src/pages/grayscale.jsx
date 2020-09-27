@@ -10,6 +10,13 @@ export default () => {
 		<div className="ml-5 mr-5 my-3">
 			<div>
 				<h1>Escala de Grises</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
+					soluta, tempore praesentium earum veritatis cupiditate quia. Eos ipsa
+					corrupti quisquam voluptate nisi atque quidem excepturi doloremque
+					commodi, blanditiis accusamus dolorum adipisci odio. Possimus
+					molestias, incidunt suscipit voluptates a commodi quos!
+				</p>
 				<h2>Modificando los pixeles RGB</h2>
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,
@@ -25,6 +32,7 @@ export default () => {
 					recusandae cum aut a? Possimus praesentium architecto cum culpa.
 				</p>
 				<RGB technique={ligthnessGrayScale} />
+				<h2>Técnica de AverageGrayScale</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
 					incidunt rerum labore quis blanditiis impedit aliquid nobis. Et,
@@ -34,6 +42,7 @@ export default () => {
 					Esse, unde delectus!
 				</p>
 				<RGB technique={averageGrayScale} />
+				<h2>Técnica de luminosityGrayScale</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi
 					eum iure, harum, qui quos, voluptatem quas sit suscipit eligendi
