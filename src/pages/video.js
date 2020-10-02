@@ -7,6 +7,9 @@ export default () => {
 			<div>
 				<h1>Test video</h1>
 				<VideoPlayer />
+				<form action="">
+					<input type="checkbox" value="checked"/>
+				</form>
 			</div>
 		</div>
 	);

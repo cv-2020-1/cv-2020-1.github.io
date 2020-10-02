@@ -26,58 +26,45 @@ export default (props) => {
 	let state = 0;
 
 	const setup = (p5, canvasParentRef) => {		
-		p5.createCanvas(width,height).parent(canvasParentRef);
+		p5.createCanvas(width*2,height).parent(canvasParentRef);
 		video = p5.createVideo([videomp4, videowebm]);
 		video.parent(canvasParentRef);
 		video.size(width, height);
+		video.hide()
 
-
-		button = p5.createButton("play");
-		button.mousePressed(toggleVid);
-		// video.pause();
-		//video.play()
-		//video.loop();
-		// playing = true;		
-	};
-
-	const toggleVid = () => {
-		if (playing) {
+		setTimeout(function(){
 			video.pause();
-			button.html("play");
-		} else {
+			video.play()
 			video.loop();
-			button.html("pause");
-		}
-		playing = !playing;
+		}, 500);
 	};
 
 	const draw = (p5) => {
-		p5.background(255);
-
-		//video.loadPixels();
-		p5.image(video.size(width,height), 0, 0);
-		p5.filter(p5.GRAY);
-
+		p5.background(255);	
 		// MAQUINA DE ESTADOS
-		/*
 		switch(state){
-			case 0: // FILTRO GRIS
-				p5.image(video, 0, 0);
+			case 0: // FILTRO GRIS	
+				p5.push();
+				p5.image(video.size(width,height), width, 0, width, height);
 				p5.filter(p5.GRAY);
+				p5.pop();
 				break;
 			case 1:// CONVOLUCION DETECTOR DE BORDES
-				p5.image(convolution(p5, video, EdgeDetectionKernel),0,0, p5.width, p5.height);
+				video.loadPixels();
+				p5.image(convolution(p5, video, EdgeDetectionKernel),width,0, p5.width, p5.height);
 				break;
 			case 2:// ESCALA DE GRISES CON BRILLO
-				p5.image(editPixels(p5, video, "average"),0,0, p5.width, p5.height);
+				video.loadPixels();
+				p5.image(editPixels(p5, video, "average"),width,0, p5.width, p5.height);
 				break;
 			default:
-				p5.image(video, 0, 0, p5.width, p5.height);
+				p5.image(video, width, 0, p5.width, p5.height);
 				break;
-		}*/
-		
-		p5.image(video, width, 0);
-		
+		}
+
+		p5.push();	
+		p5.image(video.size(width,height), 0, 0, width, height);				
+		p5.pop();							
 	};
 
 	if (typeof window !== "undefined") {
