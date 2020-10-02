@@ -36,7 +36,7 @@ export default function CafeWall() {
 
 	if (typeof window !== "undefined") {
 		const Sketch = loadable(() => import("react-p5"));
-		return <Sketch setup={setup} draw={draw} />;
+		return <Sketch className="d-flex justify-content-center" setup={setup} draw={draw} />;
 	} else {
 		return null;
 	}

@@ -6,88 +6,9 @@ export default () => {
 	var img;
 	var segmentedImage;
     var hist = new Array(256).fill(0);
-    //var minThreshold = 0;
-	//var minVar = 0;
-	//var probability = new Array(256).fill(0);
-
-	/*
-    function otsu(p5, image) {
-        //Calculo de la probabilidad para cada valor de intensidad
-        p5.colorMode(p5.HSB, 255);
-        image.loadPixels();
-        var imageTotalPixels = image.pixels.length / 4;
-
-        // console.log("imageTotalPixels", imageTotalPixels);
-        
-        for (let x = 0; x < image.width; x++) {
-            for (let y = 0; y < image.height; y++) {
-                // var index = (x + y * img.width) * 4;
-                var bright = p5.int(p5.brightness(p5.get(x, y)));
-                // var h = img.pixels[index + 0];
-                // var s = img.pixels[index + 1];
-                // var l = img.pixels[index + 2];
-                // var a = img.pixels[index + 3];
-                hist[bright]++;
-            }
-        }
-
-        console.log("hist", hist)
-        for (var i = 0; i < 255; i++) {
-            probability[i] = hist[i] / imageTotalPixels;
-        }
-
-        console.log("probability", probability);
-        //iterar sobre todos los posibles Thresholds y encontrar la varianza minima
-        for(var t = 0; t < 255; t++) {
-            //pesos clase 1 y 2
-            var c1Weight = 0;
-            var c2Weight = 0;
-            for(var i = 0; i < t; i++) {
-                c1Weight += probability[i];
-            }
-            for(var i = t + 1; i < 255; i++) {
-                c2Weight += probability[i];
-            }
-
-            //promedios calse 1 y 2
-            var c1Mean = 0;
-            var c2Mean = 0;
-            for(var i = 0; i < t; i++) {
-                c1Mean += (i * probability[i]) / c1Weight;
-            }
-            for(var i = t + 1; i < 255; i++) {
-                c2Mean += (i * probability[i]) / c2Weight;
-            }
-
-            //varianzas clase 1 y 2
-            var c1Var = 0; 
-            var c2Var = 0;
-            for(var i = 0; i < t; i++) {
-                c1Var += (i - c1Mean)**2 * (probability[i] / c1Weight);
-            }
-            for(var i = t + 1; i < 255; i++) {
-                c2Var += (i - c2Mean)**2 * (probability[i] / c2Weight);
-            }
-
-            // console.log("t", t);
-            // console.log("c1Weight", c1Weight);
-            // console.log("c1Var", c1Var);
-            // console.log("c2Weight", c2Weight);
-            // console.log("c2Var", c2Var);
-            var weightedVar = (c1Weight * c1Var) + (c2Weight * c2Var);
-            // console.log("weightedVar", weightedVar);
-            // console.log("minVar", minVar);
-            if(weightedVar > minVar) {
-                // console.log("weightedVar", weightedVar);
-                // console.log("t", t);
-                minVar = weightedVar;
-                minThreshold = t;
-            }
-        }
-        
-        // console.log("minThreshold", minThreshold);
-        return minThreshold;
-    }*/
+    var probability = new Array(256).fill(0);
+	var minVar = Number.MAX_VALUE;
+	var minThreshold = 0;
 
 	function preload(p5) {
 		img = p5.loadImage(imagen);
@@ -95,7 +16,7 @@ export default () => {
 	}
 
 	function setup(p5, canvasParentRef) {
-		p5.createCanvas(img.width * 2, img.height * 2 + 50).parent(canvasParentRef);
+		p5.createCanvas((img.width * 3) + 20, img.height + 10).parent(canvasParentRef);
 		p5.colorMode(p5.HSB, 255);
 		p5.image(img, 0, 0);
 
@@ -108,41 +29,77 @@ export default () => {
 				hist[bright]++;
 			}
 		}
-
 		hist = hist.map((x) => (x === 0 ? 1 : x));
-		console.log(hist);
+		
+		/////////////////////ALGORITMO OTSU//////////////////////////
 
-		//promedio histograma
-		// var total = 0;
-		// for(var i = 0; i < hist.length; i++) {
-		//     total += hist[i];
-		// }
-		// var avg = total / hist.length;
-		// var threshold = p5.max(hist) - avg;		
+        //Calculo de la probabilidad para cada valor de intensidad
+        var imageTotalPixels = img.pixels.length / 4;
+        for (var i = 0; i < 256; i++) {
+            probability[i] = (hist[i]) / imageTotalPixels;
+        }
+
+        //iterar sobre todos los posibles Thresholds y encontrar la varianza minima
+        for(var t = 0; t < 255; t++) {
+            //pesos clase 1 y 2
+            var c1Weight = 0;
+            var c2Weight = 0;
+            for(var i = 0; i < t; i++) {
+                c1Weight += probability[i];
+            }
+            for(var i = t + 1; i < 256; i++) {
+                c2Weight += probability[i];
+            }
+
+            //promedios calse 1 y 2
+            var c1Mean = 0;
+            var c2Mean = 0;
+            for(var i = 0; i < t; i++) {
+                c1Mean += (i * probability[i]) / c1Weight;
+            }
+            for(var i = t + 1; i < 256; i++) {
+                c2Mean += (i * probability[i]) / c2Weight;
+            }
+
+            //varianzas clase 1 y 2
+            var c1Var = 0; 
+            var c2Var = 0;
+            for(var i = 0; i < t; i++) {
+                c1Var += ((i - c1Mean)**2) * (probability[1] / c1Weight);
+            }
+            for(var i = t + 1; i < 256; i++) {
+                c2Var += ((i - c2Mean)**2) * (probability[1] / c2Weight);
+			}
+			
+            var weightedVar = (c1Weight * c1Var) + (c2Weight * c2Var);
+            if(weightedVar < minVar) {
+                minVar = weightedVar;
+                minThreshold = t;
+            }
+        }
+		///////////////FIN OTSU//////////////////////////
+
 
 		//Segmenta la imagen
 		segmentedImage.loadPixels();
 		for (let x = 0; x < segmentedImage.width; x++) {
 			for (let y = 0; y < segmentedImage.height; y++) {
-				var index = (x + y * segmentedImage.width) * 4;
-				if (p5.int(p5.brightness(p5.get(x, y))) <= 100) {
-					segmentedImage.pixels[index + 0] = 0;
-					segmentedImage.pixels[index + 1] = 0;
-					segmentedImage.pixels[index + 2] = 0;
-				} else if (p5.int(p5.brightness(p5.get(x, y))) > 100) {
-					segmentedImage.pixels[index + 0] = 255;
-					segmentedImage.pixels[index + 1] = 255;
-					segmentedImage.pixels[index + 2] = 255;
+                var bright = p5.int(p5.brightness(p5.get(x, y)));
+				if (bright <= minThreshold) {
+                    segmentedImage.set(x, y, p5.color(0));
+                } 
+                else if (bright > minThreshold) {
+                    segmentedImage.set(x, y, p5.color(255));
 				}
 			}
 		}
 		segmentedImage.updatePixels();
-		p5.image(segmentedImage, 0, img.height + 50);
+		p5.image(segmentedImage, img.width + 5, 0);
 
         // #############################
 		p5.push();
-		p5.stroke("red");
-        p5.translate(img.width + 5, 0);
+		p5.stroke('red');
+        p5.translate((img.width * 2) + 10, 0);
         
 		for (var k = 0; k < img.width; k += 2) {
 			var which = p5.int(p5.map(k, 0, img.width, 0, 255));
@@ -156,7 +113,7 @@ export default () => {
 		const Sketch = loadable(() => import("react-p5"));
 		return (
 			<div className="ml-5 mr-5 my-3">
-				<h1>Histograma y segmentación imagen en escala de grises</h1>
+				<h1>Histograma y segmentación imagen en escala de grises y color</h1>
 				<p>
 					Para el proceso de segmentación se uso Thresholding usando el metodo
 					de Otsu para el calculo automatico del valor umbral y el modelo de
@@ -164,9 +121,14 @@ export default () => {
 					pixel, que es un valor entero entre 0 y (L - 1) siendo L el numero
 					maximo que un pixel puede representar. Para este caso particular como
 					la imagen esta a escala de grises, L toma un valor de 256; siendo 0
-					negro puro y 255 blanco puro.
+					negro puro y 255 blanco puro. Se hizo el analisis con una imagen a color 
+					como resultado se tuvo una imagen segmentada menos precisa. Se presume
+					que esto es porque la diferencia de los dos picos mas grandes del histograma
+					de la imagen a color no es significativa y por lo tanto el metodo Otsu que funciona mejor
+					con histogramas bimodales no se desempeña optimamente, si se desea observar el resultado 
+					con imagen a color se puede cambiar en la parte de import imagen el nombre mujer por reg.
 				</p>
-				<Sketch setup={setup} preload={preload} />
+				<Sketch className="d-flex justify-content-center"  setup={setup} preload={preload} />
 				<h2>Referencias</h2>
 				<ul>
 					<li><a href="https://en.wikipedia.org/wiki/Image_segmentation">Segmentación</a></li>

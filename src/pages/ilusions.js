@@ -35,6 +35,13 @@ export default () => {
 					desaparecen al mirar directamente a una intersección.
 				</p>
 				<Grid />
+
+				<h2>Referencias</h2>
+				<ul>
+					<li><a href="https://www.illusionsindex.org/i/cafe-wall-illusion">Cafe Wall</a></li>
+					<li><a href="https://es.wikipedia.org/wiki/Ilusi%C3%B3n_de_Ebbinghaus">Ebbinghaus</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Grid_illusion">Grid Illusion</a></li>
+				</ul>
 			</div>
 		</div>
 	);
