@@ -10,7 +10,7 @@ import fuego from "../assets/fuego.jpg";
 let img, canvas;
 export default (props) => {
   const preload = (p5) => {
-    img = p5.loadImage(fuego);      
+    img = p5.loadImage(fuego);
   }
 
   const setup = (p5, canvasParentRef) => {       
@@ -28,9 +28,6 @@ export default (props) => {
     p5.image(convolution(p5, img, BoxBlurKernel),0,p5.height/2, p5.width/2, p5.height/2);
     p5.image(convolution(p5, img, SharpenKernel),p5.width/2,p5.height/2, p5.width/2, p5.height/2);  
   }
-
-  
-
 
 
 

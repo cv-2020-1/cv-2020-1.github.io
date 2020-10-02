@@ -3,11 +3,11 @@ import "../../styles/app.css";
 import React from "react";
 import loadable from "@loadable/component";
 // Asset to convert
-import asset from "../../../static/android-chrome-512x512.png";
+import asset from "../../assets/fuego.jpg";
 
-import editPixels from "../grayscale/average";
+import editPixelsGray from "./editPixelsGray";
 
-export default function rgb(props) {
+export default function grayScale(props) {
 	let img = null;
 	let canvas = null;
 
@@ -17,7 +17,13 @@ export default function rgb(props) {
 	const setup = (p5, canvasParentRef) => {
 		canvas = p5.createCanvas(800, 500);
 		canvas.parent(canvasParentRef);
-		p5.image(editPixels(p5, img, props.technique), 0, 0, p5.width, p5.height);
+		p5.image(
+			editPixelsGray(p5, img, props.technique),
+			0,
+			0,
+			p5.width,
+			p5.height
+		);
 	};
 
 	const draw = (p5) => {

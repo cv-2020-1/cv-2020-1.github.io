@@ -1,10 +1,6 @@
 import React from "react";
-import RGB from "../algorithms/grayscale/rgb";
-import {
-	luminosityGrayScale,
-	averageGrayScale,
-	ligthnessGrayScale,
-} from "../algorithms/grayscale/average";
+import Grayscale from "../algorithms/grayscale/grayScale";
+
 export default () => {
 	return (
 		<div className="ml-5 mr-5 my-3">
@@ -17,7 +13,7 @@ export default () => {
 					commodi, blanditiis accusamus dolorum adipisci odio. Possimus
 					molestias, incidunt suscipit voluptates a commodi quos!
 				</p>
-				<h2>Modificando los pixeles RGB</h2>
+				<h2>Modificando los pixeles Grayscale</h2>
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,
 					consequatur repellendus? Magnam quasi pariatur voluptatum ipsum
@@ -31,7 +27,7 @@ export default () => {
 					alias, quas ullam accusamus voluptatum aperiam dolore animi in, natus
 					recusandae cum aut a? Possimus praesentium architecto cum culpa.
 				</p>
-				<RGB technique={ligthnessGrayScale} />
+				<Grayscale technique={"ligthness"} />
 				<h2>Técnica de AverageGrayScale</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
@@ -41,7 +37,7 @@ export default () => {
 					nobis, accusantium hic facere. Quibusdam excepturi magni numquam.
 					Esse, unde delectus!
 				</p>
-				<RGB technique={averageGrayScale} />
+				<Grayscale technique={"average"} />
 				<h2>Técnica de luminosityGrayScale</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi
@@ -51,7 +47,7 @@ export default () => {
 					quisquam impedit nostrum ratione ea id fugit expedita voluptate quas
 					voluptates! Aperiam, cumque.
 				</p>
-				<RGB technique={luminosityGrayScale} />
+				<Grayscale technique={"luminosity"} />
 			</div>
 		</div>
 	);
