@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../styles/app.css"
 import React from "react"
 import loadable from "@loadable/component"
 
@@ -39,10 +38,10 @@ export default (props) => {
   if (typeof window !== "undefined") {
     const Sketch = loadable(() => import("react-p5"))
     return (
-      <div className="jumbotron m-4 bg-gradient-orange">
+      <div className="ml-5 mr-5 my-3">
         <h1>MASCARAS DE CONVOLUCIÓN</h1>
-        <hr className="my-4"></hr>
-        <p>En esta sección implementamos las mascaras de convolución para una imagen aplicando otros 3 tipos de kernels
+        <hr className="my-3"></hr>
+        <p className="mb-2">En esta sección implementamos las mascaras de convolución para una imagen aplicando otros 3 tipos de kernels
           la imagen #1 (esquina superior izquierda) es la imagen original, la imagen #2 (esquina superior derecha) es la imagen con el kernel de detección de bordes,
           la imagen #3 (esquina inferior izquierda) es la imagen con un kernel BoxBlur, y la imagen #4 (esquina inferior derecha) es la imagen con el kernel Sharpen.
         </p>
