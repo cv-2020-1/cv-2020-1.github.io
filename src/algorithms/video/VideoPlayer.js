@@ -28,8 +28,8 @@ export default (props) => {
 		video.size(width, height);
 		
 		// Para no tener que esconder el video original y facilitar el trabajo a la cpu
-		video.elt.parentElement.classList.add("position-relative");
-		video.elt.classList.add("position-absolute");
+		video.elt.parentElement.style.setProperty( 'position', 'relative', 'important' );
+		video.elt.style.setProperty( 'position', 'absolute', 'important' );
 		video.elt.style.top = "0";
 		video.elt.style.left = "0";
 		//video.hide()
