@@ -22,7 +22,7 @@ export default (props) => {
 	let video;
 	var data = [];
 
-	const setup = (p5, canvasParentRef) => {		
+	const setup = (p5, canvasParentRef) => {	
 		p5.createCanvas(width*2,height).parent(canvasParentRef);
 		video = p5.createVideo([videomp4, videowebm]);
 		video.parent(canvasParentRef);
@@ -41,7 +41,7 @@ export default (props) => {
 		}, 500);
 		
 	};
-	console.log(data);
+
 	const draw = (p5) => {
 		p5.background(255);	
 		// MAQUINA DE ESTADOS
@@ -73,9 +73,9 @@ export default (props) => {
 
 		const sum = Object.values(data).reduce((acc, current) => acc + current.frameRate, 0);
 
-const average = sum / Object.values(data).length;
-console.log(average);
-        
+		const average = sum / Object.values(data).length;
+		
+        document.getElementById("framerate").innerHTML = average;
 	
 		// Dibujado del video normal pero ya no se usa porque consume cpu y se pone lento, 
 		//p5.push();	
@@ -85,7 +85,7 @@ console.log(average);
 
 	if (typeof window !== "undefined") {
 		const Sketch = loadable(() => import("react-p5"));
-		return <Sketch setup={setup} draw={draw}/>;
+		return (<Sketch setup={setup} draw={draw}/>);
 	} else {
 		return null;
 	}
