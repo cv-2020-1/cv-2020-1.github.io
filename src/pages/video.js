@@ -33,6 +33,8 @@ export default () => {
 					<input type="radio" className="mx-3" id="r4" name="group1" value="r4" onChange={radioChange.bind(this,'r4')}/>
 					<label htmlFor="r4">VIDEO ORIGINAL</label>					
 				</form>
+				<br></br>
+				<p style={{fontSize:'30px'}}>FRAMERATE: <span id="framerate"></span></p>
 			</div>
 		</div>
 	);

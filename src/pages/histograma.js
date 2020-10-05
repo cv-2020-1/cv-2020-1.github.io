@@ -1,6 +1,11 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import loadable from "@loadable/component";
 import imagen from "../assets/mujer.png";
+import SegColor from "../assets/SegColor.png"
+
+import Code from '../components/Code/Code';
+import otsu from '../components/Code/otsu';
 
 export default () => {
 	var img;
@@ -114,6 +119,7 @@ export default () => {
 		return (
 			<div className="ml-5 mr-5 my-3">
 				<h1>Histograma y segmentación imagen en escala de grises y color</h1>
+				<hr className="my-3"></hr>
 				<p>
 					Para el proceso de segmentación se uso Thresholding usando el metodo
 					de Otsu para el calculo automatico del valor umbral y el modelo de
@@ -121,14 +127,28 @@ export default () => {
 					pixel, que es un valor entero entre 0 y (L - 1) siendo L el numero
 					maximo que un pixel puede representar. Para este caso particular como
 					la imagen esta a escala de grises, L toma un valor de 256; siendo 0
-					negro puro y 255 blanco puro. Se hizo el analisis con una imagen a color 
-					como resultado se tuvo una imagen segmentada menos precisa. Se presume
-					que esto es porque la diferencia de los dos picos mas grandes del histograma
-					de la imagen a color no es significativa y por lo tanto el metodo Otsu que funciona mejor
-					con histogramas bimodales no se desempeña optimamente, si se desea observar el resultado 
-					con imagen a color se puede cambiar en la parte de import imagen el nombre mujer por reg.
+					negro puro y 255 blanco puro.
 				</p>
 				<Sketch className="d-flex justify-content-center"  setup={setup} preload={preload} />
+				<div className="d-flex justify-content-center">
+					<img src={SegColor} alt="SegColor"/>
+				</div>
+				<h2>Algoritmo metodo Thresholding Otsu</h2>
+				<Code code={otsu}></Code>
+				<h2>Conclusiones</h2>
+				<ul>
+					<li>En el analisis con una imagen a color se tuvo una imagen 
+						segmentada menos precisa. Se presume que esto es porque la 
+						diferencia de los dos picos mas grandes del histograma de la imagen que se uso
+						como prueba no es significativa y por lo tanto el metodo Otsu que funciona mejor
+						con histogramas bimodales no se desempeño optimamente
+					</li>
+					<li>
+						El metodo de Otsu es un metodo sencillo que se implementa en tiempo lineal. Tiene la 
+						limitación de desempeñarse optimamente unicamente en histogramas bimodales aunque existen tecnicas para
+						suplir esta falencia  
+					</li>
+				</ul>
 				<h2>Referencias</h2>
 				<ul>
 					<li><a href="https://en.wikipedia.org/wiki/Image_segmentation">Segmentación</a></li>

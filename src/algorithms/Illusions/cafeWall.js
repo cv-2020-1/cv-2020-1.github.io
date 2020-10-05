@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import loadable from "@loadable/component";
 
 export default function CafeWall() {
