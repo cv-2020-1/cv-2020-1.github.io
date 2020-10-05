@@ -1,6 +1,9 @@
 import React from "react";
 import Grayscale from "../algorithms/grayscale/grayScale";
 
+import imagen from "../assets/LUMA.png";
+import codigo from "../assets/Code.png";
+
 export default () => {
 	const divStyle = {
 		backgroundColor: "white",
@@ -14,20 +17,23 @@ export default () => {
 					A continuación se describen diferentes tecnicas que se pueden aplicar
 					para conseguir transformar una imagen en escalda de grises.
 				</p>
-				<h2>Modificando los pixeles Grayscale</h2>
+				<h2>Modificando los pixeles con el método de la desaturación </h2>
 				<p>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam,
-					consequatur repellendus? Magnam quasi pariatur voluptatum ipsum
-					corporis sed animi, labore optio harum aut. Saepe deleniti vero
-					aliquam libero maiores adipisci ipsum molestias? Esse nisi, rerum
-					explicabo, officia cupiditate et temporibus earum suscipit asperiores
-					necessitatibus amet itaque quibusdam iste quia obcaecati sint, aperiam
-					ipsa fugit! Rerum, nobis. Corrupti sequi saepe vel accusantium natus,
-					nihil quo officia at! Et, unde saepe nostrum doloremque sint repellat
-					labore molestias corporis delectus reiciendis beatae possimus debitis
-					alias, quas ullam accusamus voluptatum aperiam dolore animi in, natus
-					recusandae cum aut a? Possimus praesentium architecto cum culpa.
+					La desaturación de una imagen funciona convirtiendo un triplete RGB en
+					un triplete HSL y luego obligando a la saturación a cero. Básicamente,
+					esto toma un color y lo convierte en su variante menos saturada . Las
+					matemáticas de esta conversión son más complejas de lo que garantiza
+					este artículo, por lo que simplemente proporcionaré el cálculo del
+					método abreviado. Un píxel se puede desaturar encontrando el punto
+					medio entre el máximo de (R, G, B) y el mínimo de (R, G, B),
 				</p>
+				<div background="white">
+					<img
+						src="http://latex.codecogs.com/svg.latex?pixel_%7Bcanal%7D=%5Cfrac%7B%20%5Cmax%7B%20(%20r,%20g,%20b)%20%7D%20&plus;%20%20%5Cmin%7B%20(r,%20g,%20b)%20%7D%20%7D%7B2%7D"
+						height="100px"
+						style={divStyle}
+					/>
+				</div>
 				<Grayscale technique={"ligthness"} />
 				<h2>Técnica del Promedio</h2>
 				<p>
@@ -66,7 +72,19 @@ export default () => {
 					/>
 				</div>
 				<Grayscale technique={"luminosity"} />
-
+				<h2>Escala de Grises por Hardware (Shaders)</h2>
+				Una forma mucho mas eficiente de dibujar en nuestra pantalla una imagen
+				es mediante shaders, ya que la misma aprovecha los diferentes nucleos de
+				nuestra GPU para procesar paralelamente cada uno de los pixeles que
+				deseamos renderizar.
+				<br />
+				<img src={imagen} height="800px" />
+				<h3>Código que ejecutara cada nucleo de la GPU</h3>
+				Como cada uno de los procesadores de la GPU debe ejecutar codigo de
+				manera independiente se debe crear un archivo de tipo ".glsl" para
+				enviar a cada uno de ellos.
+				<br />
+				<img src={codigo} height="300px" />
 				<h3>Referencias</h3>
 				<ul>
 					<li>
@@ -75,6 +93,12 @@ export default () => {
 					<li>https://en.wikipedia.org/wiki/Grayscale</li>
 					<li>
 						https://www.dspace.espol.edu.ec/bitstream/123456789/10715/1/I.pdf
+					</li>
+					<li>
+						http://roberto-mtz.blogspot.com/2013/02/lab-1-escala-de-grises-promedio-umbral.html
+					</li>
+					<li>
+						https://tannerhelland.com/2011/10/01/grayscale-image-algorithm-vb6.html
 					</li>
 				</ul>
 			</div>
