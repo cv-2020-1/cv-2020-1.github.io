@@ -1,8 +1,13 @@
 {
   "main.js": "render-page.js",
   "main.js.map": "render-page.js.map",
+  "static/boxblur.png": "static/boxblur-0b3f8e36ceaf1f8d451bfe460159dbab.png",
+  "static/edgedetection.png": "static/edgedetection-65d0d7fc922dd65f11a0858295205535.png",
   "static/fuego.jpg": "static/fuego-15df1985b6d383a48079c4d3db3154d0.jpg",
   "static/mujer.png": "static/mujer-b9d874a2aec8953de70bd3dcd0b58d89.png",
+  "static/shader-edge.png": "static/shader-edge-366855548d30306cfe95112fc3e68bcb.png",
+  "static/shader-sharpen.png": "static/shader-sharpen-a8793aad420292ce512a49a542a572ae.png",
+  "static/sharpen.png": "static/sharpen-13f80781cff70f254e0fe22d0b53c581.png",
   "static/video.mp4": "static/video-fcabf6d6adc73fd88d36d1557faed271.mp4",
   "static/video.webm": "static/video-24d4b06e8be5ccb2a940dbe6c9aa0657.webm"
 }
