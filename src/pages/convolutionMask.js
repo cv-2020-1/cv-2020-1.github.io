@@ -90,6 +90,7 @@ export default (props) => {
         </ul>
         <br></br>
         <h2>REFERENCIAS</h2>
+        <a href="https://github.com/VisualComputing/FragmentShaders/tree/gh-pages/sketches/desktop">Creditos a: https://github.com/VisualComputing/FragmentShaders/tree/gh-pages/sketches/desktop</a><br></br>
         <a href="https://en.wikipedia.org/wiki/Kernel_(image_processing)">https://en.wikipedia.org/wiki/Kernel_(image_processing)</a><br></br>
         <a href="https://www.slrlounge.com/glossary/image-sharpening-definition/">https://www.slrlounge.com/glossary/image-sharpening-definition/</a>
         <br></br><br></br><br></br>
