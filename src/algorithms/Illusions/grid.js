@@ -1,6 +1,7 @@
 
 import React from "react";
-import loadable from "@loadable/component"
+import "bootstrap/dist/css/bootstrap.min.css";
+import loadable from "@loadable/component";
 
 
 export default function Grid () {
