@@ -16,7 +16,7 @@ import {___, ____, _____, EdgeDetectionKernel} from '../../algorithms/convolutio
 
 
 export default (props) => {	
-	let size = 45;
+	let size = 40;
 	let height = 9*size;
   	let width = 16*size;  
 	let video;
@@ -43,7 +43,7 @@ export default (props) => {
 	};
 
 	const draw = (p5) => {
-		p5.background(255);	
+		p5.background(255);
 		// MAQUINA DE ESTADOS
 
 		switch(props.state){
@@ -75,7 +75,8 @@ export default (props) => {
 
 		const average = sum / Object.values(data).length;
 		
-        document.getElementById("framerate").innerHTML = average;
+		document.getElementById("framerate").innerHTML = average;
+		document.getElementById("efficiency").innerHTML = (average*100)/60;
 	
 		// Dibujado del video normal pero ya no se usa porque consume cpu y se pone lento, 
 		//p5.push();	
