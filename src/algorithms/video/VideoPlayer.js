@@ -19,7 +19,8 @@ export default (props) => {
 	let size = 45;
 	let height = 9*size;
   	let width = 16*size;  
-	let video;		
+	let video;
+	var data = [];
 
 	const setup = (p5, canvasParentRef) => {		
 		p5.createCanvas(width*2,height).parent(canvasParentRef);
@@ -35,12 +36,12 @@ export default (props) => {
 		//video.hide()
 
 		setTimeout(function(){			
-			video.play()
+			video.play();
 			video.loop();			
 		}, 500);
 		
 	};
-
+	console.log(data);
 	const draw = (p5) => {
 		p5.background(255);	
 		// MAQUINA DE ESTADOS
@@ -64,7 +65,18 @@ export default (props) => {
 				p5.image(video.size(width,height), width, 0, width,height);
 				break;
 		}
+		// var feed = {frameRate:};
+		
+		data.push({
+			frameRate : p5.frameRate()
+		});
 
+		const sum = Object.values(data).reduce((acc, current) => acc + current.frameRate, 0);
+
+const average = sum / Object.values(data).length;
+console.log(average);
+        
+	
 		// Dibujado del video normal pero ya no se usa porque consume cpu y se pone lento, 
 		//p5.push();	
 		//p5.image(video.size(width,height), 0, 0, width,height);				

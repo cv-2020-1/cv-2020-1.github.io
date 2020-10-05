@@ -31,12 +31,11 @@ const editPixelsGray = (p5, img, tipo) => {
 
 export default editPixelsGray;
 
-function averageGrayScale(r, g, b) {
-	return (r + g + b) / 3;
-}
-
 function ligthnessGrayScale(r, g, b) {
 	return Math.max(r, g, b) + Math.min(r, g, b) / 2;
+}
+function averageGrayScale(r, g, b) {
+	return (r + g + b) / 3;
 }
 
 // Gray Scale with LuminosityGrayScale

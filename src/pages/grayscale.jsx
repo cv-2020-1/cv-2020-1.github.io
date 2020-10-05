@@ -2,16 +2,17 @@ import React from "react";
 import Grayscale from "../algorithms/grayscale/grayScale";
 
 export default () => {
+	const divStyle = {
+		backgroundColor: "white",
+		padding: "20px",
+	};
 	return (
 		<div className="ml-5 mr-5 my-3">
 			<div>
 				<h1>Escala de Grises</h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
-					soluta, tempore praesentium earum veritatis cupiditate quia. Eos ipsa
-					corrupti quisquam voluptate nisi atque quidem excepturi doloremque
-					commodi, blanditiis accusamus dolorum adipisci odio. Possimus
-					molestias, incidunt suscipit voluptates a commodi quos!
+					A continuación se describen diferentes tecnicas que se pueden aplicar
+					para conseguir transformar una imagen en escalda de grises.
 				</p>
 				<h2>Modificando los pixeles Grayscale</h2>
 				<p>
@@ -28,26 +29,54 @@ export default () => {
 					recusandae cum aut a? Possimus praesentium architecto cum culpa.
 				</p>
 				<Grayscale technique={"ligthness"} />
-				<h2>Técnica de AverageGrayScale</h2>
+				<h2>Técnica del Promedio</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-					incidunt rerum labore quis blanditiis impedit aliquid nobis. Et,
-					perspiciatis ea, sit eum delectus fugit rerum eligendi quae officia
-					dolore iusto commodi earum cum expedita sed quam eaque ab mollitia
-					nobis, accusantium hic facere. Quibusdam excepturi magni numquam.
-					Esse, unde delectus!
+					Este proceso se basa en la estimación del la tonalidad de gris
+					aplicando un promedio en los 3 canales que tiene cada uno de los
+					pixeles presentes en la imagen.A continuación se muestra la formula
+					que se utiliza para obtener el valor de gris con el cual quedara cada
+					uno de los canales (RGB) en cada pixeles.
 				</p>
+				<div background="white">
+					<img
+						src="http://latex.codecogs.com/svg.latex?pixel_%7Bcanal%7D%20=%20%5Cfrac%7Br%20&plus;%20g%20&plus;%20b%7D%7B3%7D"
+						height="100px"
+						style={divStyle}
+					/>
+				</div>
 				<Grayscale technique={"average"} />
-				<h2>Técnica de luminosityGrayScale</h2>
+				<h2>
+					Conversión colorimétrica (preservación de la luminancia perceptiva) a
+					escala de grises{" "}
+				</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi
-					eum iure, harum, qui quos, voluptatem quas sit suscipit eligendi
-					architecto tempora aut! Delectus doloribus dolor vel, ducimus
-					recusandae rerum laborum consequuntur, culpa, soluta modi obcaecati ut
-					quisquam impedit nostrum ratione ea id fugit expedita voluptate quas
-					voluptates! Aperiam, cumque.
+					Otra estrategía que se puede utilizar para que el ojo humano perciba
+					una imagen en escala de grises es modificar la intesidad de luz que el
+					ojo percibe en función del color que se esta observando. De esta
+					manera podemos usar la siguiente acuación de la luminancia nos muestra
+					la expresión matemática de ese fenómeno y los factores de ponderación
+					de cada componente de color nos indican la sensibilidad del ojo humano
+					a las frecuencias del espectro cercanas al rojo, verde y azul.
 				</p>
+				<div background="white">
+					<img
+						src="http://latex.codecogs.com/svg.latex?pixel_%7Bcanal%7D%20=%20%5Cleft%20%5Clfloor%20%7B0.21*R_%7Bcanal%7D%20&plus;%200.72%20*G_%7Bcanal%7D%20&plus;%200.07%20*B_%7Bcanal%7D%7D%20%5Cright%20%5Crfloor"
+						height="100px"
+						style={divStyle}
+					/>
+				</div>
 				<Grayscale technique={"luminosity"} />
+
+				<h3>Referencias</h3>
+				<ul>
+					<li>
+						https://www.uv.es/gpoei/eng/Pfc_web/generalidades/grises/grey.htm
+					</li>
+					<li>https://en.wikipedia.org/wiki/Grayscale</li>
+					<li>
+						https://www.dspace.espol.edu.ec/bitstream/123456789/10715/1/I.pdf
+					</li>
+				</ul>
 			</div>
 		</div>
 	);
