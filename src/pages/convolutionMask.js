@@ -29,9 +29,6 @@ export default (props) => {
     p5.image(convolution(p5, img, SharpenKernel),p5.width/2,p5.height/2, p5.width/2, p5.height/2);  
   }
 
-
-
-
   if (typeof window !== "undefined") {
     const Sketch = loadable(() => import("react-p5"))
     return (
