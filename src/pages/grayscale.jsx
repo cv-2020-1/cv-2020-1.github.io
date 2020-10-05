@@ -53,7 +53,7 @@ export default () => {
 				<Grayscale technique={"average"} />
 				<h2>
 					Conversión colorimétrica (preservación de la luminancia perceptiva) a
-					escala de grises{" "}
+					escala de grises
 				</h2>
 				<p>
 					Otra estrategía que se puede utilizar para que el ojo humano perciba
@@ -85,6 +85,24 @@ export default () => {
 				enviar a cada uno de ellos.
 				<br />
 				<img src={codigo} height="300px" />
+				<h2>Conclusiones</h2>
+				<ul>
+					<li>
+						Existen diferentes mecanismos para transformar una imagen a escala
+						de grises, los cuales tambien utilizan diferentes enfoques y
+						producen resultados con diferentes variaciones.
+					</li>
+					<li>
+						Tranformar una imagen en escala de grises es altamente pararelizable
+						ya que la operación se puede realizar de manera independiente sobre
+						cada uno de los pixeles.
+					</li>
+					<li>
+						Los Shaders utilizan cada uno de los nucleos de la GPU de manera
+						independiente para modificar cada uno de los pixeles paralelamente y
+						realizar el proceso mas rapidamente.
+					</li>
+				</ul>
 				<h3>Referencias</h3>
 				<ul>
 					<li>
