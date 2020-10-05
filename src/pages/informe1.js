@@ -1,4 +1,5 @@
 import React from "react";
+import Cover from "../@lekoarts/gatsby-theme-cara/components/cover";
 
 export default () => {
 	return (
@@ -22,20 +23,40 @@ export default () => {
 					</li>
 					<li>
 						(solo para video) Medición de la eficiencia computacional para las
-						operaciones realizadas. 
+						operaciones realizadas.
 					</li>
 				</ul>
-				
-				<h2>REFERENCIAS</h2>
-				<a href="https://p5js.org/es/examples/dom-video.html">
-					https://p5js.org/es/examples/dom-video.html
-				</a>
-				<br></br>
-				<a href="https://p5js.org/es/examples/dom-video-canvas.html">
-					https://p5js.org/es/examples/dom-video-canvas.html
-				</a>
-				<br></br>
-				<br></br>
+
+				<h2>SOLUCIONES</h2>
+				<Cover
+					title="Escala de Grises"
+					link="/grayscale"
+					bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+				>
+					Escala de grises
+				</Cover>
+				<Cover
+					title="Convolucion con P5"
+					link="/convolutionMask"
+					bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+				>
+					Convoluciones en P5 con distintos kernels para tratamiento de
+					imágenes.
+				</Cover>
+				<Cover
+					title="Histograma"
+					link="/histograma"
+					bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+				>
+					Histograma de imagen
+				</Cover>
+				<Cover
+					title="Eficiencia computacional"
+					link="/video"
+					bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+				>
+					Eficiencia computacional con videos
+				</Cover>
 				<br></br>
 			</div>
 		</div>
