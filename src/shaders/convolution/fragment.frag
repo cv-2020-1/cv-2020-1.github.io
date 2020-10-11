@@ -44,7 +44,7 @@ void main(){
   /*kernel[0] = -2.0; kernel[1] = -1.0; kernel[2] = 0.0;
   kernel[3] = -1.0; kernel[4] = 1.0; kernel[5] = 1.0;
   kernel[6] = 0.0; kernel[7] = 1.0; kernel[8] = 2.0;
-  */
+*/
   // sharpen kernel
   // kernel[0] = -1.0; kernel[1] = 0.0; kernel[2] = -1.0;
   // kernel[3] = 0.0; kernel[4] = 5.0; kernel[5] = 0.0;
