@@ -45,7 +45,7 @@ export default (props) => {
       <div className="ml-5 mr-5 my-3">
         <h1>MASCARAS DE CONVOLUCIÓN</h1>
         <hr className="my-3"></hr>
-        <p className="mb-4 text-justify" style={{fontSize:'20px', width:'60%'}}>En esta sección implementamos las mascaras de convolución para una imagen aplicando 3 tipos de kernels
+        <p className="mb-4 text-justify" style={{fontSize:'20px', width:'60%'}}>En esta sección implementamos las mascaras de convolución para una imagen aplicando 3 tipos de kernels 
           <strong>la imagen #1 (esquina superior izquierda)</strong> es la imagen original, la <strong>imagen #2 (esquina superior derecha)</strong> es la imagen con el kernel de detección de bordes,
           <strong>la imagen #3 (esquina inferior izquierda)</strong> es la imagen con un kernel BoxBlur, y la <strong>imagen #4 (esquina inferior derecha)</strong> es la imagen con el kernel Sharpen.
         </p>
@@ -86,7 +86,7 @@ export default (props) => {
         <ul className="mb-5">
           <li>1) Aunque apliquemos kernels habran algunas imagenes cuya imagen resultante sea dificil diferenciar de la original a simple vista</li>
           <li>2) Con Variar solo uno de los numeros del kernel se pueden obtener resultados muy distintos</li>
-          <li>3) Si aplicamos cualquiera de los filtro desde processing o p5 usando Shaders la velocidad con que renderizo la imagen o inclusive un video es muy superior</li>
+          <li>3) Si aplicamos cualquiera de los filtros desde processing o p5 usando Shaders la velocidad con que renderizo la imagen o inclusive un video es muy superior</li>
         </ul>
         <br></br>
         <h2>REFERENCIAS</h2>
