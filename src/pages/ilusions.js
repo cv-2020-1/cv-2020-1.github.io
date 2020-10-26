@@ -7,6 +7,7 @@ import Bezier from "../algorithms/Illusions/bezier";
 import Gradient from "../algorithms/Illusions/gradient";
 import White from "../algorithms/Illusions/white";
 import Poggendorff from "../algorithms/Illusions/poggendorff";
+import Motion_Binding from "../algorithms/Illusions/motion_binding";
 
 export default () => {
 	return (
@@ -90,6 +91,15 @@ export default () => {
 					estructura intermedia.
 				</p>
 				<Poggendorff />
+				<h2>Motion binding</h2>
+				<p>
+					Técnicamente, el mecanismo que funciona aquí se conoce como "enlace de
+					movimiento". Mire el centro de la imagen, los dos pares de líneas
+					parecen moverse uno frente al otro. Si mantiene el click izquierdo
+					presionado, aparecerán unas estructuras en cada vértice que le
+					permitirán observar mejor el cuadrado.
+				</p>
+				<Motion_Binding />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
@@ -130,6 +140,11 @@ export default () => {
 					<li>
 						<a href="https://en.wikipedia.org/wiki/Poggendorff_illusion">
 							Poggendorff illusion
+						</a>
+					</li>
+					<li>
+						<a href="https://michaelbach.de/ot/mot-motionBinding/index.html">
+							Motion binding
 						</a>
 					</li>
 				</ul>
