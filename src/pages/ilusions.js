@@ -1,4 +1,5 @@
 import React from "react";
+import Bricks from "../algorithms/Illusions/bricks";
 import CafeWall from "../algorithms/Illusions/cafeWall";
 import Ebbinghaus from "../algorithms/Illusions/ebbinghaus";
 import Grid from "../algorithms/Illusions/grid";
@@ -35,12 +36,36 @@ export default () => {
 					desaparecen al mirar directamente a una intersección.
 				</p>
 				<Grid />
-
+				<h2>Bricks</h2>
+				<p>
+					La ilusión de los pasos es un experimento psicológico muy famoso.
+					Ambos bloques parecen moverse a velocidades diferentes, pero en
+					realidad se mueven a la misma velocidad. Haz click con el ratón para
+					confirmar que se mueven a la misma velocidad.
+				</p>
+				<Bricks />
 				<h2>Referencias</h2>
 				<ul>
-					<li><a href="https://www.illusionsindex.org/i/cafe-wall-illusion">Cafe Wall</a></li>
-					<li><a href="https://es.wikipedia.org/wiki/Ilusi%C3%B3n_de_Ebbinghaus">Ebbinghaus</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/Grid_illusion">Grid Illusion</a></li>
+					<li>
+						<a href="https://www.illusionsindex.org/i/cafe-wall-illusion">
+							Cafe Wall
+						</a>
+					</li>
+					<li>
+						<a href="https://es.wikipedia.org/wiki/Ilusi%C3%B3n_de_Ebbinghaus">
+							Ebbinghaus
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Grid_illusion">
+							Grid Illusion
+						</a>
+					</li>
+					<li>
+						<a href="https://p5js.org/es/examples/simulate-stepping-feet-illusion.html">
+							Bricks Illusion
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
