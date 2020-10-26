@@ -76,7 +76,6 @@ export default () => {
 							Stepping feet illusion
 						</a>
 					</li>
-					
 					<li>
 						<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">
 							Bézier curve

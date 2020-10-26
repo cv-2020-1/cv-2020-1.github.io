@@ -10,9 +10,6 @@ export default function Bricks() {
 
 	function setup(p5, canvasParentRef) {
 		p5.createCanvas(720, 400).parent(canvasParentRef);
-		p5.createP("Keep the mouse clicked").style("color", "#ffffff");
-		p5.createP("to check whether the bricks").style("color", "#ffffff");
-		p5.createP("are moving at same speed or not").style("color", "#ffffff");
 		xPos = 0;
 		xSpeed = 1;
 	}
