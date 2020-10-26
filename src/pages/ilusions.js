@@ -8,6 +8,7 @@ import Gradient from "../algorithms/Illusions/gradient";
 import White from "../algorithms/Illusions/white";
 import Poggendorff from "../algorithms/Illusions/poggendorff";
 import Motion_Binding from "../algorithms/Illusions/motion_binding";
+import Squares from "../algorithms/Illusions/squares";
 
 export default () => {
 	return (
@@ -100,6 +101,14 @@ export default () => {
 					permitirán observar mejor el cuadrado.
 				</p>
 				<Motion_Binding />
+				<h2>Other optical illusions</h2>
+				<p>
+					Al fondo se observa un cuadrado girando, dando la sensación de
+					acercarse y alejarse, si mantienes presionado el click izquierdo
+					quitarás los cuadrados naranjas y así podrás observar mejor la
+					rotación del cuadrado azul.
+				</p>
+				<Squares />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
