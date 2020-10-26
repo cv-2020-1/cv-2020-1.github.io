@@ -4,6 +4,7 @@ import CafeWall from "../algorithms/Illusions/cafeWall";
 import Ebbinghaus from "../algorithms/Illusions/ebbinghaus";
 import Grid from "../algorithms/Illusions/grid";
 import Bezier from "../algorithms/Illusions/bezier";
+import Gradient from "../algorithms/Illusions/gradient";
 
 export default () => {
 	return (
@@ -54,6 +55,15 @@ export default () => {
 					curvas que se comenzó a utilizar con éxito en los programas de CAD.
 				</p>
 				<Bezier />
+				<h2>Color gradient</h2>
+				<p>
+					El fondo es un degradado de color y progresa de gris oscuro a gris
+					claro. La barra horizontal parece progresar de gris claro a gris
+					oscuro, pero en realidad es de un solo color. Si mantiene presionado
+					el click izquierdo, cambiará el color del fondo pero no el color de la
+					barra horizontal.
+				</p>
+				<Gradient />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
@@ -79,6 +89,11 @@ export default () => {
 					<li>
 						<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">
 							Bézier curve
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Optical_illusion#/media/File:Gradient-optical-illusion.svg">
+							Color gradient
 						</a>
 					</li>
 				</ul>
