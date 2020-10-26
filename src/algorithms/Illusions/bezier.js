@@ -13,9 +13,8 @@ export default function Bezier() {
 
 	function draw(p5) {
 
-		//line(0, y1,  x2, 400);
-		// y1 starts with a value of 0, and increases by 50 for each line
-		// x1 starts with a value of 50, and increases by 50 for each line
+		// y1 starts with a value of 0, and increases by 5 for each line
+		// x1 starts with a value of 50, and increases by 5 for each line
 		p5.line(0, y1, x2, 400);
 
 		y1 = y1 + 5;
