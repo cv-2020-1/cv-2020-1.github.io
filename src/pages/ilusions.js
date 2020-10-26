@@ -3,6 +3,7 @@ import Bricks from "../algorithms/Illusions/bricks";
 import CafeWall from "../algorithms/Illusions/cafeWall";
 import Ebbinghaus from "../algorithms/Illusions/ebbinghaus";
 import Grid from "../algorithms/Illusions/grid";
+import Bezier from "../algorithms/Illusions/bezier";
 
 export default () => {
 	return (
@@ -36,7 +37,7 @@ export default () => {
 					desaparecen al mirar directamente a una intersección.
 				</p>
 				<Grid />
-				<h2>Bricks</h2>
+				<h2>Stepping feet</h2>
 				<p>
 					La ilusión de los pasos es un experimento psicológico muy famoso.
 					Ambos bloques parecen moverse a velocidades diferentes, pero en
@@ -44,6 +45,15 @@ export default () => {
 					confirmar que se mueven a la misma velocidad.
 				</p>
 				<Bricks />
+				<h2>Bézier curve</h2>
+				<p>
+					Se denomina curvas de Bézier a un sistema que se desarrolló hacia los
+					años 1960 para el trazado de dibujos técnicos, en el diseño
+					aeronáutico y en el de automóviles. Su denominación es en honor a
+					Pierre Bézier, quien ideó un método de descripción matemática de las
+					curvas que se comenzó a utilizar con éxito en los programas de CAD.
+				</p>
+				<Bezier />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
@@ -62,8 +72,14 @@ export default () => {
 						</a>
 					</li>
 					<li>
-						<a href="https://p5js.org/es/examples/simulate-stepping-feet-illusion.html">
-							Bricks Illusion
+						<a href="https://en.wikipedia.org/wiki/Stepping_feet_illusion">
+							Stepping feet illusion
+						</a>
+					</li>
+					
+					<li>
+						<a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">
+							Bézier curve
 						</a>
 					</li>
 				</ul>
