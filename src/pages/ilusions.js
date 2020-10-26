@@ -6,6 +6,7 @@ import Grid from "../algorithms/Illusions/grid";
 import Bezier from "../algorithms/Illusions/bezier";
 import Gradient from "../algorithms/Illusions/gradient";
 import White from "../algorithms/Illusions/white";
+import Poggendorff from "../algorithms/Illusions/poggendorff";
 
 export default () => {
 	return (
@@ -80,6 +81,15 @@ export default () => {
 					dejarán ver que ambos bloques son del mismo color.
 				</p>
 				<White />
+				<h2>Poggendorff illusion</h2>
+				<p>
+					La ilusión de Poggendorff es una ilusión geométrico-óptica que implica
+					la percepción errónea de la posición de un segmento de una línea
+					transversal que ha sido interrumpida por el contorno de una estructura
+					intermedia. Si mantiene presionado el click izquierdo, se quitará la
+					estructura intermedia.
+				</p>
+				<Poggendorff />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
@@ -115,6 +125,11 @@ export default () => {
 					<li>
 						<a href="https://en.wikipedia.org/wiki/White's_illusion">
 							White's illusion
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Poggendorff_illusion">
+							Poggendorff illusion
 						</a>
 					</li>
 				</ul>
