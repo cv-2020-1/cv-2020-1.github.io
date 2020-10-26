@@ -30,7 +30,7 @@ export default function Bricks() {
 			for (let i = 0; i < p5.width / len; i++) {
 				if (i % 2 == 0) {
 					let bar = p5.rect(i * len, p5.height, len, -p5.height);
-					bar.fill("black")
+					bar.fill("black");
 				}
 			}
 		}

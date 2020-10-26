@@ -5,6 +5,7 @@ import Ebbinghaus from "../algorithms/Illusions/ebbinghaus";
 import Grid from "../algorithms/Illusions/grid";
 import Bezier from "../algorithms/Illusions/bezier";
 import Gradient from "../algorithms/Illusions/gradient";
+import White from "../algorithms/Illusions/white";
 
 export default () => {
 	return (
@@ -64,6 +65,21 @@ export default () => {
 					barra horizontal.
 				</p>
 				<Gradient />
+				<h2>White's illusion</h2>
+				<p>
+					La ilusión del blanco es una ilusión de brillo en la que ciertas
+					franjas de una rejilla en blanco y negro se reemplazan parcialmente
+					por un rectángulo gris. Ambas barras grises son del mismo color y
+					opacidad. El brillo de las piezas grises parece cambiar hacia el
+					brillo de las franjas fronterizas superior e inferior. Esto está en
+					aparente oposición a la inhibición lateral, ya que no puede explicar
+					esta ocurrencia. Esto ocurre incluso cuando las manchas grises en las
+					franjas negras están bordeadas por más blanco que negro (y a la
+					inversa para las manchas grises en las franjas blancas). Al mantener
+					el click izquierdo presionado, se quitarán las franjas horizontales y
+					dejarán ver que ambos bloques son del mismo color.
+				</p>
+				<White />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
@@ -94,6 +110,11 @@ export default () => {
 					<li>
 						<a href="https://en.wikipedia.org/wiki/Optical_illusion#/media/File:Gradient-optical-illusion.svg">
 							Color gradient
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/White's_illusion">
+							White's illusion
 						</a>
 					</li>
 				</ul>
