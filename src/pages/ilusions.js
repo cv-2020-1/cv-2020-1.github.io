@@ -9,6 +9,7 @@ import White from "../algorithms/Illusions/white";
 import Poggendorff from "../algorithms/Illusions/poggendorff";
 import Motion_Binding from "../algorithms/Illusions/motion_binding";
 import Squares from "../algorithms/Illusions/squares";
+import Cubik from "../algorithms/Illusions/cubik"
 
 export default () => {
 	return (
@@ -109,6 +110,13 @@ export default () => {
 					rotación del cuadrado azul.
 				</p>
 				<Squares />
+				<h2>Cubik 3D</h2>
+				<p>
+					Ilusión de movimiento que consiste en dar la percepción de que se mueve el cubo en el medio
+					mientras en realidad lo que se esta moviendo es la camara. Presionando el click izquierdo del mouse
+					se puede ver el movimiento del cubo y el fondo.
+				</p>
+				<Cubik />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
