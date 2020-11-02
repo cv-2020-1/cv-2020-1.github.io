@@ -1,0 +1,15 @@
+.altura {
+	height: 300px !important;
+	max-height: 1000px;
+	overflow: auto;
+}
+
+h2 {
+	font-family: "Segoe UI";
+	color: #e2e8f0;
+	line-height: none;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
