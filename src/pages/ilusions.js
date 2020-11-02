@@ -10,6 +10,7 @@ import Poggendorff from "../algorithms/Illusions/poggendorff";
 import Motion_Binding from "../algorithms/Illusions/motion_binding";
 import Squares from "../algorithms/Illusions/squares";
 import TessellationCross from "../algorithms/Illusions/tessellationCross";
+import Mixer from "../algorithms/Illusions/mixer";
 
 export default () => {
 	return (
@@ -113,6 +114,10 @@ export default () => {
 
 				<p>Teselation</p>
 				<TessellationCross />
+
+				<h2>Mixer</h2>
+				<Mixer />
+
 				<h2>Referencias</h2>
 				<ul>
 					<li>
