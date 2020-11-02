@@ -10,6 +10,8 @@ import Poggendorff from "../algorithms/Illusions/poggendorff";
 import Motion_Binding from "../algorithms/Illusions/motion_binding";
 import Squares from "../algorithms/Illusions/squares";
 import Cubik from "../algorithms/Illusions/cubik"
+import TessellationCross from "../algorithms/Illusions/tessellationCross";
+
 
 export default () => {
 	return (
@@ -117,6 +119,9 @@ export default () => {
 					se puede ver el movimiento del cubo y el fondo.
 				</p>
 				<Cubik />
+
+				<p>Teselation</p>
+				<TessellationCross />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
