@@ -9,6 +9,7 @@ import White from "../algorithms/Illusions/white";
 import Poggendorff from "../algorithms/Illusions/poggendorff";
 import Motion_Binding from "../algorithms/Illusions/motion_binding";
 import Squares from "../algorithms/Illusions/squares";
+import TessellationCross from "../algorithms/Illusions/tessellationCross";
 
 export default () => {
 	return (
@@ -109,6 +110,9 @@ export default () => {
 					rotación del cuadrado azul.
 				</p>
 				<Squares />
+
+				<p>Teselation</p>
+				<TessellationCross />
 				<h2>Referencias</h2>
 				<ul>
 					<li>
