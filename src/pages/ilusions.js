@@ -225,7 +225,7 @@ export default () => {
 							<div className="altura">
 								<Gist
 									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
+									file="cafeWall.js"
 								/>
 							</div>
 						</div>
@@ -255,12 +255,10 @@ export default () => {
 								circulo amarillo y descubrir que ambos circulos poseen el mismo
 								tamaño.
 							</p>
-							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
-								/>
-							</div>
+							<Gist
+								id="d6cd78d5c67bd3e6451c3c747e4a2806"
+								file="ebbinghaus.js"
+							/>
 						</div>
 
 						<div className="col-sm">
@@ -282,12 +280,7 @@ export default () => {
 								mirar directamente a una intersección.
 							</p>
 
-							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
-								/>
-							</div>
+							<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="grid.js" />
 						</div>
 
 						<div className="col-sm">
@@ -311,10 +304,7 @@ export default () => {
 								<b>Como se usa: </b>
 							</p>
 							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
-								/>
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bricks.js" />
 							</div>
 						</div>
 
@@ -341,10 +331,7 @@ export default () => {
 								<b>Como se usa: </b>
 							</p>
 							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
-								/>
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bezier.js" />
 							</div>
 						</div>
 
@@ -370,7 +357,7 @@ export default () => {
 							<div className="altura">
 								<Gist
 									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
+									file="gradient.js"
 								/>
 							</div>
 						</div>
@@ -405,10 +392,7 @@ export default () => {
 								<b>Como se usa: </b>
 							</p>
 							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="Chef-bezier.js"
-								/>
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="White.js" />
 							</div>
 						</div>
 
@@ -439,6 +423,12 @@ export default () => {
 								recta. imagen, los dos pares de líneas parecen moverse uno
 								frente al otro.
 							</p>
+							<div className="altura">
+								<Gist
+									id="d6cd78d5c67bd3e6451c3c747e4a2806"
+									file="poggendorff.js"
+								/>
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -462,6 +452,12 @@ export default () => {
 								aparecerán unas estructuras en cada vértice que le permitirán
 								observar mejor el cuadrado.
 							</p>
+							<div className="altura">
+								<Gist
+									id="d6cd78d5c67bd3e6451c3c747e4a2806"
+									file="motion-Binding.js"
+								/>
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -483,6 +479,9 @@ export default () => {
 								quitarás los cuadrados naranjas y así podrás observar mejor la
 								rotación del cuadrado azul. re
 							</p>
+							<div className="altura">
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="squares.js" />
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -507,6 +506,9 @@ export default () => {
 								notar que el cubo esta quieto y el entorno es el que presenta el
 								movimiento.
 							</p>
+							<div className="altura">
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="cubik.js" />
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -525,6 +527,9 @@ export default () => {
 								obtener una ilusión de un cilindro 3D, ademas de que aumentando
 								mucho la velocidad de Giro se dibuja un cuadro en la mitad
 							</p>
+							<div className="altura">
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="mixer.js" />
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -544,6 +549,12 @@ export default () => {
 								fundamentales: No dejar huecos y que las figuras no se
 								superpongan.
 							</p>
+							<div className="altura">
+								<Gist
+									id="d6cd78d5c67bd3e6451c3c747e4a2806"
+									file="tessellationCross.js"
+								/>
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -564,6 +575,9 @@ export default () => {
 								<b>Como se usa: </b> Use el raton + click para orbitar el
 								elemento y notar que es un dibujo en 2D
 							</p>
+							<div className="altura">
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bezier.js" />
+							</div>
 						</div>
 
 						<div className="col-sm">
