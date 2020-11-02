@@ -29,9 +29,9 @@ export default function Mixer() {
     
     function keyPressed(p5) {        
         if(p5.keyCode === p5.LEFT_ARROW)
-            speed += 10;
-        else if(p5.keyCode === p5.RIGHT_ARROW)
             speed -= 10;
+        else if(p5.keyCode === p5.RIGHT_ARROW)
+            speed += 10;
     }
     // clase cross
     class cross {
