@@ -218,9 +218,10 @@ export default () => {
 								inclinadas.
 							</p>
 							<p>
-								<b>Como se usa: </b>Puede mover el mouse de izquieda a derecha y
-								de esta manera mover la posición de las filas, de esta manera
-								notara como se produce la ilusión optica.
+								<b>Como se usa: </b>Al mover el mouse de izquierda a derecha
+								conseguira mover la posición filas, de esta manera notara que
+								las filas son completamente horizontales y no estan inclinadas
+								como se aparenta en la ilusión.
 							</p>
 							<div className="altura">
 								<Gist
@@ -252,8 +253,8 @@ export default () => {
 							<p>
 								<b>Como se usa: </b>Puede mover el mouse de izquieda a derecha y
 								de esta manera conseguira ocultar los circulos que circundan el
-								circulo amarillo y descubrir que ambos circulos poseen el mismo
-								tamaño.
+								circulo rojo de esta manera podra descubrir que ambos circulos
+								poseen el mismo tamaño.
 							</p>
 							<div className="altura">
 								<Gist
@@ -269,17 +270,27 @@ export default () => {
 					</div>
 				</div>
 
-				<h2>Grid</h2>
+				<h2>Grid twinkling illusion</h2>
 				<div className="container ">
 					<div className="row ">
 						<div className="col-sm">
 							<p>
-								<b>Descripción: </b>La ilusión de cuadrícula de Hermann es una
-								ilusión óptica descrita por Ludimar Hermann en 1870. La ilusión
-								se caracteriza por manchas grises "fantasmales" que se perciben
-								en las intersecciones de una cuadrícula blanca (o de color
-								claro) sobre un fondo negro. Las manchas grises desaparecen al
-								mirar directamente a una intersección.
+								<b>Descripción: </b>La ilusión de centelleo de la rejilla es una
+								ilusión óptica, descubierta por E. Lingelbach en 1994, que por
+								lo general se considera una variación de la ilusión de la
+								cuadrícula de Hermann. Se construye mediante la superposición de
+								discos blancos en las intersecciones de barras grises
+								ortogonales en un fondo negro.
+							</p>
+
+							<p>
+								<b>Como se usa: </b> La ilusión hace creer al observador que
+								existen puntos oscuros que aparecen y desaparecen rápidamente en
+								las intersecciones aleatorias, de ahí la etiqueta
+								“centelleante”.Cuando una persona mantiene sus ojos directamente
+								en una sola intersección, no aparece el punto oscuro. Los puntos
+								oscuros desaparecen si uno está demasiado cerca o demasiado
+								lejos de la imagen.
 							</p>
 
 							<div className="altura">
@@ -301,12 +312,15 @@ export default () => {
 								<b>Descripción: </b>La ilusión de los pasos es un experimento
 								psicológico muy famoso. Ambos bloques parecen moverse a
 								velocidades diferentes, pero en realidad se mueven a la misma
-								velocidad. Haz click con el ratón para confirmar que se mueven a
-								la misma velocidad.
+								velocidad.
 							</p>
 							<p>
-								<b>Como se usa: </b>
+								<b>Como se usa: </b> Haz click con el ratón para confirmar que
+								ambos rectangulos se mueven a la misma velocidad. El efecto
+								desaparece debido a que se quita la textura rayada en el fondo y
+								no queda contraste que permita percibir el efecto.
 							</p>
+
 							<div className="altura">
 								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bricks.js" />
 							</div>
@@ -331,8 +345,10 @@ export default () => {
 								de descripción matemática de las curvas que se comenzó a
 								utilizar con éxito en los programas de CAD.
 							</p>
+
 							<p>
-								<b>Como se usa: </b>
+								<b>Como se usa: </b> Recarga la página para poder observar como
+								se construye la curva de bezier.Unicamente con lineas rectas.
 							</p>
 							<div className="altura">
 								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bezier.js" />
@@ -354,10 +370,13 @@ export default () => {
 								<b>Descripción: </b>El fondo es un degradado de color y progresa
 								de gris oscuro a gris claro. La barra horizontal parece
 								progresar de gris claro a gris oscuro, pero en realidad es de un
-								solo color. Si mantiene presionado el click izquierdo, cambiará
-								el color del fondo pero no el color de la barra horizontal.
+								solo color.
 							</p>
-
+							<p>
+								<b>Como se usa: </b> Si mantiene presionado el click izquierdo,
+								cambiará el color del fondo pero no el color de la barra
+								horizontal.
+							</p>
 							<div className="altura">
 								<Gist
 									id="d6cd78d5c67bd3e6451c3c747e4a2806"
@@ -387,13 +406,12 @@ export default () => {
 								a la inhibición lateral, ya que no puede explicar esta
 								ocurrencia. Esto ocurre incluso cuando las manchas grises en las
 								franjas negras están bordeadas por más blanco que negro (y a la
-								inversa para las manchas grises en las franjas blancas). Al
-								mantener el click izquierdo presionado, se quitarán las franjas
-								horizontales y dejarán ver que ambos bloques son del mismo
-								color.
+								inversa para las manchas grises en las franjas blancas).
 							</p>
 							<p>
-								<b>Como se usa: </b>
+								<b>Como se usa: </b> Al mantener el click izquierdo presionado,
+								se quitarán las franjas horizontales y dejarán ver que ambos
+								bloques son del mismo color.
 							</p>
 							<div className="altura">
 								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="white.js" />
@@ -416,16 +434,13 @@ export default () => {
 								<b>Descripción: </b>La ilusión de Poggendorff es una ilusión
 								geométrico-óptica que implica la percepción errónea de la
 								posición de un segmento de una línea transversal que ha sido
-								interrumpida por el contorno de una estructura intermedia. Si
-								mantiene presionado el click izquierdo, se quitará la estructura
-								intermedia.
+								interrumpida por el contorno de una estructura intermedia.
 							</p>
 							<p>
 								<b>Como se usa: </b> Si mantiene presionado el click izquierdo,
 								se quitará la estructura intermedia de tal manera que pueda
 								observar con claridad que la línea rojo-verde es completamente
-								recta. imagen, los dos pares de líneas parecen moverse uno
-								frente al otro.
+								recta.
 							</p>
 							<div className="altura">
 								<Gist
@@ -454,7 +469,7 @@ export default () => {
 							<p>
 								<b>Como se usa: </b> Si mantiene el click izquierdo presionado,
 								aparecerán unas estructuras en cada vértice que le permitirán
-								observar mejor el cuadrado.
+								observar mejor el cuadrado en movimiento.
 							</p>
 							<div className="altura">
 								<Gist
@@ -481,7 +496,7 @@ export default () => {
 							<p>
 								<b>Como se usa: </b>si mantienes presionado el click izquierdo
 								quitarás los cuadrados naranjas y así podrás observar mejor la
-								rotación del cuadrado azul. re
+								rotación del cuadrado azul.
 							</p>
 							<div className="altura">
 								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="squares.js" />
@@ -500,10 +515,8 @@ export default () => {
 						<div className="col-sm">
 							<p>
 								<b>Descripción: </b>Ilusión de movimiento que consiste en dar la
-								percepción de que se mueve el cubo en el medio mientras en
-								realidad lo que se esta moviendo es la camara. Presionando el
-								click izquierdo del mouse se puede ver el movimiento del cubo y
-								el fondo.
+								percepción al espectador que se mueve un cubo en el medio
+								mientras en realidad lo que se esta moviendo es la camara.
 							</p>
 							<p>
 								<b>Como se usa: </b> Puede usar click para orbitar el elemento y
@@ -531,6 +544,11 @@ export default () => {
 								obtener una ilusión de un cilindro 3D, ademas de que aumentando
 								mucho la velocidad de Giro se dibuja un cuadro en la mitad
 							</p>
+							<p>
+								<b>Como se usa: </b> Presione el click izquierdo sobre el
+								elemento, esto hara girar las cruces de tal manera que perciba
+								un elemento cilindrico en 3D.
+							</p>
 							<div className="altura">
 								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="mixer.js" />
 							</div>
@@ -551,7 +569,15 @@ export default () => {
 								decir la regularidad de un patrón de figuras que cubren
 								totalmente una superficie plana cumpliendo con dos requisitos
 								fundamentales: No dejar huecos y que las figuras no se
-								superpongan.
+								superpongan. las cruces negras giran hacia la izquierda mientras
+								que las cruces blancas realizan un giro hacia la derecha.
+							</p>
+							<p>
+								<b>Como se usa: </b> Este efecto consigue cambiar el plano de
+								fondo de blanco a negro y de negro a blanco, haciendo que a su
+								vez las cruces también cambien de un color a otro. Los giros
+								provocan una confusión momentánea en el cerebro que resulta muy
+								interesante.
 							</p>
 							<div className="altura">
 								<Gist
@@ -573,11 +599,13 @@ export default () => {
 							<p>
 								<b>Descripción: </b>Esta ilusión consiste en un dibujo 2D que al
 								visualizarse desde cierta perspectiva da la ilusión de tener
-								cierta proofundidad y representar un elemento de 3D.
+								cierta profundidad y representar un elemento en 3D.
 							</p>
 							<p>
-								<b>Como se usa: </b> Use el raton + click para orbitar el
-								elemento y notar que es un dibujo en 2D
+								<b>Como se usa: </b> Arrastre el raton + click para orbitar el
+								elemento y notar que es un dibujo en 2D doblado por la mitad en
+								forma de L.Si desea observar el efecto nuevamente recargue la
+								página.
 							</p>
 							<div className="altura">
 								<Gist
