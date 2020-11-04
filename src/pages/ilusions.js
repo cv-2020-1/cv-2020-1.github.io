@@ -238,34 +238,38 @@ export default () => {
 				</div>
 
 				<h2>Ebbinghaus</h2>
-				<div className="container ">
-					<div className="row ">
-						<div className="col-sm">
-							<p>
-								<b>Descripción: </b> La ilusión de Ebbinghaus es una ilusión
-								óptica que altera la percepción de las dimensiones relativas. En
-								la versión más conocida de la ilusión, dos círculos de la misma
-								medida son colocados cercanos uno a otro y son circundados, uno
-								por círculos de un tamaño mayor y el otro por círculos de menor
-								tamaño; el primer círculo central parecerá más pequeño que el
-								otro.
-							</p>
-							<p>
-								<b>Como se usa: </b>Puede mover el mouse de izquieda a derecha y
-								de esta manera conseguira ocultar los circulos que circundan el
-								circulo rojo de esta manera podra descubrir que ambos circulos
-								poseen el mismo tamaño.
-							</p>
-							<div className="altura">
-								<Gist
-									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="ebbinghaus.js"
-								/>
-							</div>
-						</div>
 
-						<div className="col-sm">
-							<Ebbinghaus />
+				<div className="card ">
+					<h5 class="card-header text-dark">Featured</h5>
+					<div class="card-body text-white bg-dark">
+						<div className="row ">
+							<div className="col-sm">
+								<p>
+									<b>Descripción: </b> La ilusión de Ebbinghaus es una ilusión
+									óptica que altera la percepción de las dimensiones relativas.
+									En la versión más conocida de la ilusión, dos círculos de la
+									misma medida son colocados cercanos uno a otro y son
+									circundados, uno por círculos de un tamaño mayor y el otro por
+									círculos de menor tamaño; el primer círculo central parecerá
+									más pequeño que el otro.
+								</p>
+								<p>
+									<b>Como se usa: </b>Puede mover el mouse de izquieda a derecha
+									y de esta manera conseguira ocultar los circulos que circundan
+									el circulo rojo de esta manera podra descubrir que ambos
+									circulos poseen el mismo tamaño.
+								</p>
+								<div className="altura">
+									<Gist
+										id="d6cd78d5c67bd3e6451c3c747e4a2806"
+										file="ebbinghaus.js"
+									/>
+								</div>
+							</div>
+
+							<div className="col-sm">
+								<Ebbinghaus />
+							</div>
 						</div>
 					</div>
 				</div>
