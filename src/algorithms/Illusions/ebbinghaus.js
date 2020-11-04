@@ -45,7 +45,7 @@ export default function Ebbinghaus() {
 	}
 
 	function setup(p5, canvasParentRef) {
-		p5.createCanvas(600, 400).parent(canvasParentRef);
+		p5.createCanvas(550, 400).parent(canvasParentRef);
 	}
 
 	function draw(p5) {

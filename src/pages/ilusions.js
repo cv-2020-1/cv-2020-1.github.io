@@ -255,10 +255,12 @@ export default () => {
 								circulo amarillo y descubrir que ambos circulos poseen el mismo
 								tamaño.
 							</p>
-							<Gist
-								id="d6cd78d5c67bd3e6451c3c747e4a2806"
-								file="ebbinghaus.js"
-							/>
+							<div className="altura">
+								<Gist
+									id="d6cd78d5c67bd3e6451c3c747e4a2806"
+									file="ebbinghaus.js"
+								/>
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -280,7 +282,9 @@ export default () => {
 								mirar directamente a una intersección.
 							</p>
 
-							<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="grid.js" />
+							<div className="altura">
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="grid.js" />
+							</div>
 						</div>
 
 						<div className="col-sm">
@@ -392,7 +396,7 @@ export default () => {
 								<b>Como se usa: </b>
 							</p>
 							<div className="altura">
-								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="White.js" />
+								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="white.js" />
 							</div>
 						</div>
 
@@ -455,7 +459,7 @@ export default () => {
 							<div className="altura">
 								<Gist
 									id="d6cd78d5c67bd3e6451c3c747e4a2806"
-									file="motion-Binding.js"
+									file="motion_binding.js"
 								/>
 							</div>
 						</div>
@@ -576,7 +580,10 @@ export default () => {
 								elemento y notar que es un dibujo en 2D
 							</p>
 							<div className="altura">
-								<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="bezier.js" />
+								<Gist
+									id="d6cd78d5c67bd3e6451c3c747e4a2806"
+									file="stairs3Dillusion.js"
+								/>
 							</div>
 						</div>
 

@@ -9,7 +9,7 @@ export default function Bricks() {
 	let xSpeed;
 
 	function setup(p5, canvasParentRef) {
-		p5.createCanvas(720, 400).parent(canvasParentRef);
+		p5.createCanvas(450, 400).parent(canvasParentRef);
 		xPos = 0;
 		xSpeed = 1;
 	}
@@ -24,7 +24,7 @@ export default function Bricks() {
 		if (xPos + 100 >= p5.width || xPos <= 0) {
 			xSpeed *= -1;
 		}
-		
+
 		if (!p5.mouseIsPressed) {
 			let len = 12;
 			for (let i = 0; i < p5.width / len; i++) {
