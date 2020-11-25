@@ -14,7 +14,7 @@ export default (props) => {
 				<hr className="my-3"></hr>
 				<h3>LUZ AMBIENTAL</h3>
 				<iframe
-					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+					src="https://cv-2020-1.github.io/ShadersLights/p5js-ambientlight/index.html"
 					frameborder="0"
 				></iframe>
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ AMBIENTAL</h4>
