@@ -160,6 +160,13 @@ export default (props) => {
 					también incluye un término de luz ambiental para simular la luz que se
 					dispersa en el entorno.
 				</p>
+				<h4>COMO SE USA</h4>
+				<p>
+					El slider de luz especular cambia el tamaño del reflejo de la luz sobre la forma
+					variando en un rango de 0 a 2.
+					El slider de brillo varia en un rango de 0 a 256 modificando el brillo de la luz sobre la forma.
+					En la parte de abajo se pueden seleccionar los colores de la luz y de la figura 
+				</p>
 				<div className="lights" style={{background:"white"}}>
 					<img src={combinedimg} width="600" height="400"></img>
 				</div>
