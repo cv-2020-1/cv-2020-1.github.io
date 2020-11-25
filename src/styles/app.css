@@ -42,4 +42,5 @@ iframe{
     min-width: 500px;
     min-height: 500px;
     border: none;
+    overflow: hidden !important;
 }
