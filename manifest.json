@@ -1,10 +1,13 @@
 {
   "main.js": "render-page.js",
   "main.js.map": "render-page.js.map",
+  "static/Blinn_Vectors.svg": "static/Blinn_Vectors-923ac4220c1f0426184f2408590b1e66.svg",
   "static/Code.png": "static/Code-73cd0c341f13415bf37711b89972b8b6.png",
   "static/LUMA.png": "static/LUMA-a38aac36d6c802c45835c62a8dce7954.png",
   "static/SegColor.png": "static/SegColor-828134a9418a02165cef1bead096625a.png",
+  "static/basic_lighting_specular_theory.jpg": "static/basic_lighting_specular_theory-1e6c353f07632e931efb9b76f65a587b.jpg",
   "static/boxblur.png": "static/boxblur-0b3f8e36ceaf1f8d451bfe460159dbab.png",
+  "static/diffuse_light.jpg": "static/diffuse_light-d1b66a4c99a448ca8d3b833a49bcc54f.jpg",
   "static/edgedetection.png": "static/edgedetection-65d0d7fc922dd65f11a0858295205535.png",
   "static/fuego.jpg": "static/fuego-15df1985b6d383a48079c4d3db3154d0.jpg",
   "static/mujer.png": "static/mujer-b9d874a2aec8953de70bd3dcd0b58d89.png",
