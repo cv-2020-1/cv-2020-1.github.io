@@ -7,7 +7,7 @@ import combinedimg from "../assets/light-images/Blinn_Vectors.svg";
 export default (props) => {
 	if (typeof window !== "undefined") {
 		return (
-			<div className="ml-5 mr-5 my-3">
+			<div className="ml-5 mr-5 my-3 center-content">
 				<h2>
 					<b>TALLER DE ILUMINACIÓN</b>
 				</h2>
@@ -16,6 +16,7 @@ export default (props) => {
 				<iframe
 					src="https://cv-2020-1.github.io/ShadersLights/p5js-ambientlight/index.html"
 					frameborder="0"
+					className="lights"
 				></iframe>
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ AMBIENTAL</h4>
 				<p>
@@ -32,6 +33,7 @@ export default (props) => {
 				<iframe
 					src="https://cv-2020-1.github.io/ShadersLights/fog/index.html"
 					frameborder="0"
+					className="lights"
 				></iframe>
 				<h4>DESCRIPCIÓN DE LA NIEBLA</h4>
 				<p>

@@ -44,3 +44,11 @@ iframe{
     border: none;
     overflow: hidden !important;
 }
+
+iframe.lights{
+    height:700px;
+}
+
+div.center-content *{
+    text-align: center;
+}
