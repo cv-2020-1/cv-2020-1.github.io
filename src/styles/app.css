@@ -53,10 +53,16 @@ div.lights{
 }
 
 iframe.lights{
-    min-width:700px;
-    height:700px;
+    min-width:800px;
+    height:680px;
 }
 
 div.center-content *{
     text-align: center;
+}
+
+div.center-content p{
+    max-width: 60%;
+    min-width: 20%;
+    margin: 0 auto;
 }

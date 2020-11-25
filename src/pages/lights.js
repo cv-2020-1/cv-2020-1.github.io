@@ -16,7 +16,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/p5js-ambientlight/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/p5js-ambientlight/index.html"
 						className="lights"
 					></iframe>
 				</div>
@@ -44,7 +44,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/fog/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/fog/index.html"
 						className="lights"
 					></iframe>
 				</div>
@@ -67,7 +67,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/attenuation/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/attenuation/index.html"
 						className="lights"
 					></iframe>
 				</div>
@@ -85,7 +85,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/p5js-diffuse/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/p5js-diffuse/index.html"
 						className="lights"
 					></iframe>
 				</div>
@@ -115,7 +115,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/p5js-specular/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/p5js-specular/index.html"
 						className="lights"
 					></iframe>
 				</div>
@@ -144,11 +144,12 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/ShadersLights/p5js-ambient-diffuse-specular/index.html"
+						src="https://cv-2020-1.github.io/LightsShaders/p5js-ambient-diffuse-specular/index.html"
 						className="lights"
 					></iframe>
 				</div>
-
+				
+				<br/>
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ COMBINADA</h4>
 				<p>
 					La combinación de los efectos y simulaciones descritos anteriormente
@@ -167,9 +168,11 @@ export default (props) => {
 					El slider de brillo varia en un rango de 0 a 256 modificando el brillo de la luz sobre la forma.
 					En la parte de abajo se pueden seleccionar los colores de la luz y de la figura 
 				</p>
-				<div className="lights" style={{background:"white"}}>
-					<img src={combinedimg} width="600" height="400"></img>
+				<br/>
+				<div className="lights" style={{background:"white", maxWidth:"30%", margin:"0 auto"}}>
+					<img src={combinedimg} width="90%" height="300"></img>
 				</div>
+				<br/>
         <div>
           <h3>REFERENCIAS</h3>
           <ul>
