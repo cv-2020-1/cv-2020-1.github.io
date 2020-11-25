@@ -28,6 +28,12 @@ export default (props) => {
 					ambiente, que luego se multiplicará por el color del objeto y
 					afectarlo directamente en toda su superficie.
 				</p>
+				<h4>COMO SE USA</h4>
+				<p>
+					La barra modifica la variable de luz ambiental tomando valores en un rango entre 0 y 1.
+					En la parte de abajo hay dos objetos de selección que permiten cambiar el color del objeto y 
+					el color de la luz brindando una mayor interacción.
+				</p>
 				<hr className="my-3"></hr>
 				<h3>NIEBLA</h3>
 				<iframe
