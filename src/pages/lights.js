@@ -1,19 +1,94 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import React from "react"
-import loadable from "@loadable/component"
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import diffuseimg from "../assets/light-images/diffuse_light.jpg";
+import specularimg from "../assets/light-images/basic_lighting_specular_theory.jpg";
+import combinedimg from "../assets/light-images/Blinn_Vectors.svg";
 
 export default (props) => {
-  
-    if (typeof window !== "undefined") {
-      return (
-        <div className="ml-5 mr-5 my-3">
-          <h1>TALLER DE ILUMINACIÓN</h1>
-          <hr className="my-3"></hr>
-          <p>Este es nuestro ejemplo de luz ambiental</p>
-          <iframe src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/" frameborder="0"></iframe>
-        </div>
-      )
-    } else
-      return null
-  }
-  
+	if (typeof window !== "undefined") {
+		return (
+			<div className="ml-5 mr-5 my-3">
+				<h2>
+					<b>TALLER DE ILUMINACIÓN</b>
+				</h2>
+				<hr className="my-3"></hr>
+				<h3>LUZ AMBIENTAL</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+					frameborder="0"
+				></iframe>
+				<h4>DESCRIPCIÓN DEL MODELO DE LUZ AMBIENTAL</h4>
+				<p>
+					La luz usualmente no proviene de una sola fuente de luz, muchas
+					fuentes de luz suelen impactar a un mismo objeto iluminando su
+					superficie casi que uniformemente. Para simular esto, se tienen dos
+					constantes, el color de la luz y la fuerza de la luz ambiente, estas
+					dos constantes multiplicadas darán como resultado nuestra luz
+					ambiente, que luego se multiplicará por el color del objeto y
+					afectarlo directamente en toda su superficie.
+				</p>
+				<hr className="my-3"></hr>
+				<h3>LUZ DIFUSA</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+					frameborder="0"
+				></iframe>
+				<h4>DESCRIPCIÓN DEL MODELO DE LUZ DIFUSA</h4>
+				<p>
+					El modelo de luz difusa, también conocida como modelo de Lambert, va
+					un paso más adelante que la luz ambiente, se encarga de simular la
+					dirección de los rayos de luz que afectan directamente al objeto, para
+					esto necesitamos los vectores normales que son perpendiculares a las
+					caras o superficies del objeto y así mismo necesitaremos la dirección
+					del rayo de luz. Luego calculamos el producto entre cada vector normal
+					y la dirección del rayo de luz, y escogemos el máximo entre dicho
+					resultado y 0 (para evitar negativos), este resultado suele ser
+					conocido como término de Lambert. Al final, para obtener el resultado
+					sobre el color de nuestro objeto, agregamos a la ecuación el término
+					de Lambert, multiplicando así nuestro resultado inicial de luz
+					ambiente para cada cara del objeto.
+				</p>
+				<img src={diffuseimg} width="600" height="400"></img>
+				<hr className="my-3"></hr>
+				<h3>LUZ ESPECULAR</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+					frameborder="0"
+				></iframe>
+				<h4>DESCRIPCIÓN DEL MODELO DE LUZ ESPECULAR</h4>
+				<p>
+					Ahora se implementa un nuevo factor, agregando así un valor más a la
+					ecuación. La luz especular también considera la posición y dirección
+					desde las que se miran al objeto. Para esta simulación agregaremos
+					entonces una variable adicional que tendrá la función de representar
+					la “fuerza especular”, también calcularemos el vector de reflejo
+					teniendo en cuenta el vector de dirección de la vista hacia el objeto.
+					Para terminar, después de realizar los mismos cálculos que para la luz
+					difusa, elevaremos ese valor resultante a una potencia que puede ir
+					desde 2 hasta valores muy altos (256 o más), el valor de esta potencia
+					hará el papel del brillo de nuestro reflejo, por lo tanto, un valor
+					ideal estaría aproximadamente en 32.
+				</p>
+				<img src={specularimg} width="600" height="400"></img>
+				<hr className="my-3"></hr>
+				<h3>LUZ COMBINADA</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+					frameborder="0"
+				></iframe>
+				<h4>DESCRIPCIÓN DEL MODELO DE LUZ COMBINADA</h4>
+				<p>
+					La combinación de los efectos y simulaciones descritos anteriormente
+					es llamada el modelo de reflexión de Phong, el cual se encarga de
+					reunir cada uno de los vectores, así como variables y constantes de
+					cada modelo. Describe la forma en que una superficie refleja la luz
+					como una combinación de la reflexión difusa de las superficies rugosas
+					con la reflexión especular de las superficies brillantes. El modelo
+					también incluye un término de luz ambiental para simular la luz que se
+					dispersa en el entorno.
+				</p>
+				<img src={combinedimg} width="600" height="400"></img>
+			</div>
+		);
+	} else return null;
+};
