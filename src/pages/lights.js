@@ -44,7 +44,7 @@ export default (props) => {
 				<hr className="my-3"></hr>
         		<h3>ATENUACIÓN</h3>
 				<iframe
-					src="https://cv-2020-1.github.io/ShadersLights/atenuacion/index.html"
+					src="https://cv-2020-1.github.io/ShadersLights/attenuation/index.html"
 					frameborder="0"
 				></iframe>
         		<h4>DESCRIPCIÓN DE LA ATENUACIÓN</h4>
