@@ -168,7 +168,16 @@ export default (props) => {
           <ul>
             <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-fog.html">Niebla</a></li>
             <li><a href="http://learnwebgl.brown37.net/09_lights/lights_attenuation.html">Atenuación</a></li>
-            <li><a href="https://www.shadertoy.com/view/Xd3SWH">Atenuación</a></li>
+            <li><a href="https://www.shadertoy.com/view/Xd3SWH">Atenuación (codigo base)</a></li>
+			<li><a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/shaders/lighting.glsl">Lighting</a></li>
+			<li><a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/light.js#L279">WebGl light</a></li>
+			<li><a href="https://p5js.org/es/reference/#/p5/pointLight">pointLight p5</a></li>
+			<li><a href="http://nrv.jinr.ru/alekseev/webgl/1727_03/ch3_Sphere_Phong.html">WebGL Beginner's Guide - Chapter 3</a></li>
+			<li><a href="http://www.cs.toronto.edu/~jacobson/phong-demo/">Demo phong</a></li>
+			<li><a href="https://es.wikipedia.org/wiki/Modelo_de_reflexi%C3%B3n_de_Phong">Modelo de reflexión de Phong</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong reflection model</a></li>
+			<li><a href="https://code-realm.com/lambert-lighting-in-webgl/">Lambert Lighting in WebGL</a></li>
+			<li><a href="https://thebookofshaders.com/glossary/?search=mix">Mix (The Book of Shaders) </a></li>
           </ul>
         </div>  
 			</div>
