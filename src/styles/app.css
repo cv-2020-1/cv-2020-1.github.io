@@ -45,7 +45,15 @@ iframe{
     overflow: hidden !important;
 }
 
+div.lights{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 iframe.lights{
+    min-width:700px;
     height:700px;
 }
 

@@ -8,16 +8,20 @@ export default (props) => {
 	if (typeof window !== "undefined") {
 		return (
 			<div className="ml-5 mr-5 my-3 center-content">
-				<h2>
+				<h1>
 					<b>TALLER DE ILUMINACIÓN</b>
-				</h2>
+				</h1>
 				<hr className="my-3"></hr>
-				<h3>LUZ AMBIENTAL</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/ShadersLights/p5js-ambientlight/index.html"
-					frameborder="0"
-					className="lights"
-				></iframe>
+				<h2>LUZ AMBIENTAL</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/ShadersLights/p5js-ambientlight/index.html"
+						className="lights"
+					></iframe>
+				</div>
+
+				<br/>
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ AMBIENTAL</h4>
 				<p>
 					La luz usualmente no proviene de una sola fuente de luz, muchas
@@ -28,13 +32,16 @@ export default (props) => {
 					ambiente, que luego se multiplicará por el color del objeto y
 					afectarlo directamente en toda su superficie.
 				</p>
-				<hr className="my-3"></hr>
-				<h3>NIEBLA</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/ShadersLights/fog/index.html"
-					frameborder="0"
-					className="lights"
-				></iframe>
+				<hr className="my-5"></hr>
+				<h2>NIEBLA</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/ShadersLights/fog/index.html"
+						className="lights"
+					></iframe>
+				</div>
+				
 				<h4>DESCRIPCIÓN DE LA NIEBLA</h4>
 				<p>
 					El efecto de niebla se basa en un truco que consiste en definir un color de fondo
@@ -43,24 +50,35 @@ export default (props) => {
 					valor de 0 el color de la figura es el color original y cuando la variable toma el valor de 1 el color 
 					de la figura tomaria el color establecido de la niebla que es similar al del fondo produciendo el efecto de niebla
 				</p>
-				<hr className="my-3"></hr>
-        		<h3>ATENUACIÓN</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/ShadersLights/attenuation/index.html"
-					frameborder="0"
-				></iframe>
+
+				<hr className="my-5"></hr>
+        		<h2>ATENUACIÓN</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/ShadersLights/attenuation/index.html"
+						className="lights"
+					></iframe>
+				</div>
+
         		<h4>DESCRIPCIÓN DE LA ATENUACIÓN</h4>
 				<p>
 					La luz se debilita cuanto mas se aleja de su fuente. Para calcular la atenuación se usa la expresión 1/d^2
 					donde d indica la distancia entre la fuente de luz y el objeto. A nivel de codigo se usa la expresión 
 					1.0/(c1 + c2*d + c3*d^2) donde los valores c1, c2 y c3 se pueden modificar para manejar la atenuación.
 				</p>
-				<hr className="my-3"></hr>
-				<h3>LUZ DIFUSA</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
-					frameborder="0"
-				></iframe>
+
+
+				<hr className="my-5"></hr>
+				<h2>LUZ DIFUSA</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/ShadersLights/p5js-diffuse/index.html"
+						className="lights"
+					></iframe>
+				</div>
+
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ DIFUSA</h4>
 				<p>
 					El modelo de luz difusa, también conocida como modelo de Lambert, va
@@ -76,13 +94,21 @@ export default (props) => {
 					de Lambert, multiplicando así nuestro resultado inicial de luz
 					ambiente para cada cara del objeto.
 				</p>
-				<img src={diffuseimg} width="600" height="400"></img>
-				<hr className="my-3"></hr>
-				<h3>LUZ ESPECULAR</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
-					frameborder="0"
-				></iframe>
+				<div className="lights">
+					<img src={diffuseimg} width="600" height="400"></img>
+				</div>
+
+
+				<hr className="my-5"></hr>
+				<h2>LUZ ESPECULAR</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/ShadersLights/p5js-specular/index.html"
+						className="lights"
+					></iframe>
+				</div>
+
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ ESPECULAR</h4>
 				<p>
 					Ahora se implementa un nuevo factor, agregando así un valor más a la
@@ -97,13 +123,21 @@ export default (props) => {
 					hará el papel del brillo de nuestro reflejo, por lo tanto, un valor
 					ideal estaría aproximadamente en 32.
 				</p>
-				<img src={specularimg} width="600" height="400"></img>
-				<hr className="my-3"></hr>
-				<h3>LUZ COMBINADA</h3>
-				<iframe
-					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
-					frameborder="0"
-				></iframe>
+				<div className="lights">
+					<img src={specularimg} width="600" height="400"></img>
+				</div>
+
+
+				<hr className="my-5"></hr>
+				<h2>LUZ COMBINADA</h2>
+
+				<div className="lights">
+					<iframe
+						src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+						className="lights"
+					></iframe>
+				</div>
+
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ COMBINADA</h4>
 				<p>
 					La combinación de los efectos y simulaciones descritos anteriormente
@@ -115,7 +149,9 @@ export default (props) => {
 					también incluye un término de luz ambiental para simular la luz que se
 					dispersa en el entorno.
 				</p>
-				<img src={combinedimg} width="600" height="400"></img>
+				<div className="lights" style={{background:"white"}}>
+					<img src={combinedimg} width="600" height="400"></img>
+				</div>
         <div>
           <h3>REFERENCIAS</h3>
           <ul>
