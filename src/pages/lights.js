@@ -32,6 +32,13 @@ export default (props) => {
 					ambiente, que luego se multiplicará por el color del objeto y
 					afectarlo directamente en toda su superficie.
 				</p>
+				<h4>COMO SE USA</h4>
+				<p>
+					La barra modifica la variable de luz ambiental tomando valores en un rango entre 0 y 1.
+					En la parte de abajo hay dos objetos de selección que permiten cambiar el color del objeto y 
+					el color de la luz brindando una mayor interacción.
+				</p>
+				
 				<hr className="my-5"></hr>
 				<h2>NIEBLA</h2>
 
@@ -50,7 +57,11 @@ export default (props) => {
 					valor de 0 el color de la figura es el color original y cuando la variable toma el valor de 1 el color 
 					de la figura tomaria el color establecido de la niebla que es similar al del fondo produciendo el efecto de niebla
 				</p>
-
+				<h4>COMO SE USA</h4>
+				<p>
+					La barra deslisante modifica el valor de la variable que determina el nivel de niebla del objeto.
+					Esta variable toma valores entre 0 y 1 siendo 0 nada de niebla y 1 niebla total.
+				</p>
 				<hr className="my-5"></hr>
         		<h2>ATENUACIÓN</h2>
 
