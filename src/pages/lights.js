@@ -144,7 +144,7 @@ export default (props) => {
 
 				<div className="lights">
 					<iframe
-						src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
+						src="https://cv-2020-1.github.io/ShadersLights/p5js-ambient-diffuse-specular/index.html"
 						className="lights"
 					></iframe>
 				</div>
