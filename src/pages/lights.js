@@ -28,6 +28,32 @@ export default (props) => {
 					afectarlo directamente en toda su superficie.
 				</p>
 				<hr className="my-3"></hr>
+				<h3>NIEBLA</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/ShadersLights/fog/index.html"
+					frameborder="0"
+				></iframe>
+				<h4>DESCRIPCIÓN DE LA NIEBLA</h4>
+				<p>
+					El efecto de niebla se basa en un truco que consiste en definir un color de fondo
+					y a la figura se le aplica una función mix para tratar de establecer el color de la figura mas o menos
+					igual al color de fondo a medida que se modifica el valor de una variable establecida que cuando toma el
+					valor de 0 el color de la figura es el color original y cuando la variable toma el valor de 1 el color 
+					de la figura tomaria el color establecido de la niebla que es similar al del fondo produciendo el efecto de niebla
+				</p>
+				<hr className="my-3"></hr>
+        		<h3>ATENUACIÓN</h3>
+				<iframe
+					src="https://cv-2020-1.github.io/ShadersLights/atenuacion/index.html"
+					frameborder="0"
+				></iframe>
+        		<h4>DESCRIPCIÓN DE LA ATENUACIÓN</h4>
+				<p>
+					La luz se debilita cuanto mas se aleja de su fuente. Para calcular la atenuación se usa la expresión 1/d^2
+					donde d indica la distancia entre la fuente de luz y el objeto. A nivel de codigo se usa la expresión 
+					1.0/(c1 + c2*d + c3*d^2) donde los valores c1, c2 y c3 se pueden modificar para manejar la atenuación.
+				</p>
+				<hr className="my-3"></hr>
 				<h3>LUZ DIFUSA</h3>
 				<iframe
 					src="https://cv-2020-1.github.io/Shaders/p5js-ambientlight/"
@@ -88,6 +114,14 @@ export default (props) => {
 					dispersa en el entorno.
 				</p>
 				<img src={combinedimg} width="600" height="400"></img>
+        <div>
+          <h3>REFERENCIAS</h3>
+          <ul>
+            <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-fog.html">Niebla</a></li>
+            <li><a href="http://learnwebgl.brown37.net/09_lights/lights_attenuation.html">Atenuación</a></li>
+            <li><a href="https://www.shadertoy.com/view/Xd3SWH">Atenuación</a></li>
+          </ul>
+        </div>  
 			</div>
 		);
 	} else return null;
