@@ -41,6 +41,11 @@ export default (props) => {
 					valor de 0 el color de la figura es el color original y cuando la variable toma el valor de 1 el color 
 					de la figura tomaria el color establecido de la niebla que es similar al del fondo produciendo el efecto de niebla
 				</p>
+				<h4>COMO SE USA</h4>
+				<p>
+					La barra deslisante modifica el valor de la variable que determina el nivel de niebla del objeto.
+					Esta variable toma valores entre 0 y 1 siendo 0 nada de niebla y 1 niebla total.
+				</p>
 				<hr className="my-3"></hr>
         		<h3>ATENUACIÓN</h3>
 				<iframe
