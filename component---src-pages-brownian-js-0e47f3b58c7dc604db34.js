@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{Nk92:function(e,n,l){"use strict";l.r(n);l("q4sD"),l("q1tI");var s=l("qKvR");n.default=function(e){return"undefined"!=typeof window?Object(s.d)("div",{style:{height:"100vh"}},Object(s.d)("iframe",{src:"https://slides.com/macorreag/brownian/embed",className:"slides",scrolling:"no",frameborder:"0",webkitallowfullscreen:!0,mozallowfullscreen:!0,allowfullscreen:!0})):null}},q4sD:function(e,n,l){}}]);
+//# sourceMappingURL=component---src-pages-brownian-js-0e47f3b58c7dc604db34.js.map
