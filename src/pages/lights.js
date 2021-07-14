@@ -21,7 +21,7 @@ export default (props) => {
 					></iframe>
 				</div>
 
-				<br/>
+				<br />
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ AMBIENTAL</h4>
 				<p>
 					La luz usualmente no proviene de una sola fuente de luz, muchas
@@ -34,11 +34,15 @@ export default (props) => {
 				</p>
 				<h4>COMO SE USA</h4>
 				<p>
-					La barra modifica la variable de luz ambiental tomando valores en un rango entre 0 y 1.
-					En la parte de abajo hay dos objetos de selección que permiten cambiar el color del objeto y 
-					el color de la luz brindando una mayor interacción.
+					La barra modifica la variable de luz ambiental tomando valores en un
+					rango entre 0 y 1. En la parte de abajo hay dos objetos de selección
+					que permiten cambiar el color del objeto y el color de la luz
+					brindando una mayor interacción.
 				</p>
-				
+				<div className="altura">
+					<Gist id="d6cd78d5c67bd3e6451c3c747e4a2806" file="cafeWall.js" />
+				</div>
+
 				<hr className="my-5"></hr>
 				<h2>NIEBLA</h2>
 
@@ -48,22 +52,26 @@ export default (props) => {
 						className="lights"
 					></iframe>
 				</div>
-				
+
 				<h4>DESCRIPCIÓN DE LA NIEBLA</h4>
 				<p>
-					El efecto de niebla se basa en un truco que consiste en definir un color de fondo
-					y a la figura se le aplica una función mix para tratar de establecer el color de la figura mas o menos
-					igual al color de fondo a medida que se modifica el valor de una variable establecida que cuando toma el
-					valor de 0 el color de la figura es el color original y cuando la variable toma el valor de 1 el color 
-					de la figura tomaria el color establecido de la niebla que es similar al del fondo produciendo el efecto de niebla
+					El efecto de niebla se basa en un truco que consiste en definir un
+					color de fondo y a la figura se le aplica una función mix para tratar
+					de establecer el color de la figura mas o menos igual al color de
+					fondo a medida que se modifica el valor de una variable establecida
+					que cuando toma el valor de 0 el color de la figura es el color
+					original y cuando la variable toma el valor de 1 el color de la figura
+					tomaria el color establecido de la niebla que es similar al del fondo
+					produciendo el efecto de niebla
 				</p>
 				<h4>COMO SE USA</h4>
 				<p>
-					La barra deslisante modifica el valor de la variable que determina el nivel de niebla del objeto.
-					Esta variable toma valores entre 0 y 1 siendo 0 nada de niebla y 1 niebla total.
+					La barra deslisante modifica el valor de la variable que determina el
+					nivel de niebla del objeto. Esta variable toma valores entre 0 y 1
+					siendo 0 nada de niebla y 1 niebla total.
 				</p>
 				<hr className="my-5"></hr>
-        		<h2>ATENUACIÓN</h2>
+				<h2>ATENUACIÓN</h2>
 
 				<div className="lights">
 					<iframe
@@ -72,13 +80,14 @@ export default (props) => {
 					></iframe>
 				</div>
 
-        		<h4>DESCRIPCIÓN DE LA ATENUACIÓN</h4>
+				<h4>DESCRIPCIÓN DE LA ATENUACIÓN</h4>
 				<p>
-					La luz se debilita cuanto mas se aleja de su fuente. Para calcular la atenuación se usa la expresión 1/d^2
-					donde d indica la distancia entre la fuente de luz y el objeto. A nivel de codigo se usa la expresión 
-					1.0/(c1 + c2*d + c3*d^2) donde los valores c1, c2 y c3 se pueden modificar para manejar la atenuación.
+					La luz se debilita cuanto mas se aleja de su fuente. Para calcular la
+					atenuación se usa la expresión 1/d^2 donde d indica la distancia entre
+					la fuente de luz y el objeto. A nivel de codigo se usa la expresión
+					1.0/(c1 + c2*d + c3*d^2) donde los valores c1, c2 y c3 se pueden
+					modificar para manejar la atenuación.
 				</p>
-
 
 				<hr className="my-5"></hr>
 				<h2>LUZ DIFUSA</h2>
@@ -109,7 +118,6 @@ export default (props) => {
 					<img src={diffuseimg} width="600" height="400"></img>
 				</div>
 
-
 				<hr className="my-5"></hr>
 				<h2>LUZ ESPECULAR</h2>
 
@@ -138,7 +146,6 @@ export default (props) => {
 					<img src={specularimg} width="600" height="400"></img>
 				</div>
 
-
 				<hr className="my-5"></hr>
 				<h2>LUZ COMBINADA</h2>
 
@@ -148,8 +155,8 @@ export default (props) => {
 						className="lights"
 					></iframe>
 				</div>
-				
-				<br/>
+
+				<br />
 				<h4>DESCRIPCIÓN DEL MODELO DE LUZ COMBINADA</h4>
 				<p>
 					La combinación de los efectos y simulaciones descritos anteriormente
@@ -163,33 +170,85 @@ export default (props) => {
 				</p>
 				<h4>COMO SE USA</h4>
 				<p>
-					El slider de luz especular cambia el tamaño del reflejo de la luz sobre la forma
-					variando en un rango de 0 a 2.
-					El slider de brillo varia en un rango de 0 a 256 modificando el brillo de la luz sobre la forma.
-					En la parte de abajo se pueden seleccionar los colores de la luz y de la figura 
+					El slider de luz especular cambia el tamaño del reflejo de la luz
+					sobre la forma variando en un rango de 0 a 2. El slider de brillo
+					varia en un rango de 0 a 256 modificando el brillo de la luz sobre la
+					forma. En la parte de abajo se pueden seleccionar los colores de la
+					luz y de la figura
 				</p>
-				<br/>
-				<div className="lights" style={{background:"white", maxWidth:"30%", margin:"0 auto"}}>
+				<br />
+				<div
+					className="lights"
+					style={{ background: "white", maxWidth: "30%", margin: "0 auto" }}
+				>
 					<img src={combinedimg} width="90%" height="300"></img>
 				</div>
-				<br/>
-        <div>
-          <h3>REFERENCIAS</h3>
-          <ul>
-            <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-fog.html">Niebla</a></li>
-            <li><a href="http://learnwebgl.brown37.net/09_lights/lights_attenuation.html">Atenuación</a></li>
-            <li><a href="https://www.shadertoy.com/view/Xd3SWH">Atenuación (codigo base)</a></li>
-			<li><a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/shaders/lighting.glsl">Lighting</a></li>
-			<li><a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/light.js#L279">WebGl light</a></li>
-			<li><a href="https://p5js.org/es/reference/#/p5/pointLight">pointLight p5</a></li>
-			<li><a href="http://nrv.jinr.ru/alekseev/webgl/1727_03/ch3_Sphere_Phong.html">WebGL Beginner's Guide - Chapter 3</a></li>
-			<li><a href="http://www.cs.toronto.edu/~jacobson/phong-demo/">Demo phong</a></li>
-			<li><a href="https://es.wikipedia.org/wiki/Modelo_de_reflexi%C3%B3n_de_Phong">Modelo de reflexión de Phong</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong reflection model</a></li>
-			<li><a href="https://code-realm.com/lambert-lighting-in-webgl/">Lambert Lighting in WebGL</a></li>
-			<li><a href="https://thebookofshaders.com/glossary/?search=mix">Mix (The Book of Shaders) </a></li>
-          </ul>
-        </div>  
+				<br />
+				<div>
+					<h3>REFERENCIAS</h3>
+					<ul>
+						<li>
+							<a href="https://webglfundamentals.org/webgl/lessons/webgl-fog.html">
+								Niebla
+							</a>
+						</li>
+						<li>
+							<a href="http://learnwebgl.brown37.net/09_lights/lights_attenuation.html">
+								Atenuación
+							</a>
+						</li>
+						<li>
+							<a href="https://www.shadertoy.com/view/Xd3SWH">
+								Atenuación (codigo base)
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/shaders/lighting.glsl">
+								Lighting
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/processing/p5.js/blob/1.1.9/src/webgl/light.js#L279">
+								WebGl light
+							</a>
+						</li>
+						<li>
+							<a href="https://p5js.org/es/reference/#/p5/pointLight">
+								pointLight p5
+							</a>
+						</li>
+						<li>
+							<a href="http://nrv.jinr.ru/alekseev/webgl/1727_03/ch3_Sphere_Phong.html">
+								WebGL Beginner's Guide - Chapter 3
+							</a>
+						</li>
+						<li>
+							<a href="http://www.cs.toronto.edu/~jacobson/phong-demo/">
+								Demo phong
+							</a>
+						</li>
+						<li>
+							<a href="https://es.wikipedia.org/wiki/Modelo_de_reflexi%C3%B3n_de_Phong">
+								Modelo de reflexión de Phong
+							</a>
+						</li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Phong_reflection_model">
+								Phong reflection model
+							</a>
+						</li>
+						<li>
+							<a href="https://code-realm.com/lambert-lighting-in-webgl/">
+								Lambert Lighting in WebGL
+							</a>
+						</li>
+						<li>
+							<a href="https://thebookofshaders.com/glossary/?search=mix">
+								Mix (The Book of Shaders){" "}
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		);
 	} else return null;
