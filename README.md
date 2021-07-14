@@ -23,6 +23,32 @@ Playful and Colorful One-Page portfolio featuring Parallax effects and animation
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
+frameRate(1000) //Para medir el rendimiento de el algoritmo
+
+por hardware debemos hablar de texturas
+
+
+
+En esta documentacion se ve bien
+https://itp-xstory.github.io/p5js-shaders/#/
+hay un ejemplo con video tambien
+Es lo mismo
+https://itp-xstory.github.io/p5js-shaders/#/./docs/examples/image_effects
+Tú10:01
+https://itp-xstory.github.io/p5js-shaders/#/
+
+
+_____________________
+escala de grises con shaders 
+
+
+
+
+Carg de video->https://p5js.org/es/examples/dom-video.html
+
+Shaders con p5 ->https://itp-xstory.github.io/p5js-shaders/#/
+
+
 ## ✨ Features
 
 - Theme UI-based theming
